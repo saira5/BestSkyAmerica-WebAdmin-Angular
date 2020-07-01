@@ -1,0 +1,21 @@
+
+<div *ngIf="!reload;else other_content" class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+  <app-header></app-header>
+  <div class="app-main">
+    <app-sidebar></app-sidebar>
+    <div style="width: 100%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<ng-template #other_content>
+  <div class="container">
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+    <div class="item-4"></div>
+    <div class="item-5"></div>
+  </div>
+  
+</ng-template>
