@@ -7592,42 +7592,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-apexcharts */ "./node_modules/ng-apexcharts/fesm5/ng-apexcharts.js");
-/* harmony import */ var _Shared_shared_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Shared/shared.module */ "./src/app/Shared/shared.module.ts");
-/* harmony import */ var _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Jeptag-admin/Reports/sales/sales.component */ "./src/app/Jeptag-admin/Reports/sales/sales.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _Services_http_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Services/http.service */ "./src/app/Services/http.service.ts");
-/* harmony import */ var _Services_interceptor_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Services/interceptor.service */ "./src/app/Services/interceptor.service.ts");
-/* harmony import */ var _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Services/sales-report.resolver */ "./src/app/Services/sales-report.resolver.ts");
-/* harmony import */ var _Services_auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Services/auth-guard */ "./src/app/Services/auth-guard.ts");
-/* harmony import */ var _Services_data_sharing_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Services/data-sharing.service */ "./src/app/Services/data-sharing.service.ts");
-/* harmony import */ var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ng-select/ng-select */ "./node_modules/@ng-select/ng-select/esm5/ng-select.js");
-/* harmony import */ var _Core_header_header_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Core/header/header.component */ "./src/app/Core/header/header.component.ts");
-/* harmony import */ var _Core_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Core/sidebar/sidebar.component */ "./src/app/Core/sidebar/sidebar.component.ts");
-/* harmony import */ var _Core_footer_footer_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Core/footer/footer.component */ "./src/app/Core/footer/footer.component.ts");
-/* harmony import */ var _Services_auth_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Services/auth.service */ "./src/app/Services/auth.service.ts");
-/* harmony import */ var _Core_login_login_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Core/login/login.component */ "./src/app/Core/login/login.component.ts");
-/* harmony import */ var _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Core/dashboard/dashboard.component */ "./src/app/Core/dashboard/dashboard.component.ts");
-/* harmony import */ var _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Core/page-not-found/page-not-found.component */ "./src/app/Core/page-not-found/page-not-found.component.ts");
-/* harmony import */ var _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/users/users.component */ "./src/app/Jeptag-admin/UserManagment/users/users.component.ts");
-/* harmony import */ var _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/add-user/add-user.component */ "./src/app/Jeptag-admin/UserManagment/add-user/add-user.component.ts");
-/* harmony import */ var _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/edit-user/edit-user.component */ "./src/app/Jeptag-admin/UserManagment/edit-user/edit-user.component.ts");
-/* harmony import */ var _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./Jeptag-admin/Products/product-listing/product-listing.component */ "./src/app/Jeptag-admin/Products/product-listing/product-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./Jeptag-admin/Stores/store-listing/store-listing.component */ "./src/app/Jeptag-admin/Stores/store-listing/store-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./Jeptag-admin/Stores/add-store/add-store.component */ "./src/app/Jeptag-admin/Stores/add-store/add-store.component.ts");
-/* harmony import */ var _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./Jeptag-admin/Products/add-product/add-product.component */ "./src/app/Jeptag-admin/Products/add-product/add-product.component.ts");
-/* harmony import */ var _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./Jeptag-admin/category/categories/categories.component */ "./src/app/Jeptag-admin/category/categories/categories.component.ts");
-/* harmony import */ var _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./Jeptag-admin/category/add-category/add-category.component */ "./src/app/Jeptag-admin/category/add-category/add-category.component.ts");
-/* harmony import */ var _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./Jeptag-admin/brand/brand-listing/brand-listing.component */ "./src/app/Jeptag-admin/brand/brand-listing/brand-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./Jeptag-admin/brand/add-brands/add-brands.component */ "./src/app/Jeptag-admin/brand/add-brands/add-brands.component.ts");
-/* harmony import */ var _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component */ "./src/app/Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/add-subcat/add-subcat.component */ "./src/app/Jeptag-admin/sub-category/add-subcat/add-subcat.component.ts");
-/* harmony import */ var _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./Jeptag-admin/Stores/edit-store/edit-store.component */ "./src/app/Jeptag-admin/Stores/edit-store/edit-store.component.ts");
-/* harmony import */ var _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./Jeptag-admin/Products/edit-products/edit-products.component */ "./src/app/Jeptag-admin/Products/edit-products/edit-products.component.ts");
-/* harmony import */ var _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./Jeptag-admin/Tags/taglist/taglist.component */ "./src/app/Jeptag-admin/Tags/taglist/taglist.component.ts");
-/* harmony import */ var _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./Jeptag-admin/Tags/add-tag/add-tag.component */ "./src/app/Jeptag-admin/Tags/add-tag/add-tag.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-apexcharts */ "./node_modules/ng-apexcharts/fesm5/ng-apexcharts.js");
+/* harmony import */ var _Shared_shared_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Shared/shared.module */ "./src/app/Shared/shared.module.ts");
+/* harmony import */ var _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Jeptag-admin/Reports/sales/sales.component */ "./src/app/Jeptag-admin/Reports/sales/sales.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _Services_http_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Services/http.service */ "./src/app/Services/http.service.ts");
+/* harmony import */ var _Services_interceptor_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Services/interceptor.service */ "./src/app/Services/interceptor.service.ts");
+/* harmony import */ var _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Services/sales-report.resolver */ "./src/app/Services/sales-report.resolver.ts");
+/* harmony import */ var _Services_auth_guard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Services/auth-guard */ "./src/app/Services/auth-guard.ts");
+/* harmony import */ var _Services_data_sharing_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Services/data-sharing.service */ "./src/app/Services/data-sharing.service.ts");
+/* harmony import */ var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ng-select/ng-select */ "./node_modules/@ng-select/ng-select/esm5/ng-select.js");
+/* harmony import */ var _Core_header_header_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Core/header/header.component */ "./src/app/Core/header/header.component.ts");
+/* harmony import */ var _Core_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Core/sidebar/sidebar.component */ "./src/app/Core/sidebar/sidebar.component.ts");
+/* harmony import */ var _Core_footer_footer_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Core/footer/footer.component */ "./src/app/Core/footer/footer.component.ts");
+/* harmony import */ var _Services_auth_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Services/auth.service */ "./src/app/Services/auth.service.ts");
+/* harmony import */ var _Core_login_login_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Core/login/login.component */ "./src/app/Core/login/login.component.ts");
+/* harmony import */ var _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Core/dashboard/dashboard.component */ "./src/app/Core/dashboard/dashboard.component.ts");
+/* harmony import */ var _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Core/page-not-found/page-not-found.component */ "./src/app/Core/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/users/users.component */ "./src/app/Jeptag-admin/UserManagment/users/users.component.ts");
+/* harmony import */ var _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/add-user/add-user.component */ "./src/app/Jeptag-admin/UserManagment/add-user/add-user.component.ts");
+/* harmony import */ var _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/edit-user/edit-user.component */ "./src/app/Jeptag-admin/UserManagment/edit-user/edit-user.component.ts");
+/* harmony import */ var _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./Jeptag-admin/Products/product-listing/product-listing.component */ "./src/app/Jeptag-admin/Products/product-listing/product-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./Jeptag-admin/Stores/store-listing/store-listing.component */ "./src/app/Jeptag-admin/Stores/store-listing/store-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./Jeptag-admin/Stores/add-store/add-store.component */ "./src/app/Jeptag-admin/Stores/add-store/add-store.component.ts");
+/* harmony import */ var _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./Jeptag-admin/Products/add-product/add-product.component */ "./src/app/Jeptag-admin/Products/add-product/add-product.component.ts");
+/* harmony import */ var _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./Jeptag-admin/category/categories/categories.component */ "./src/app/Jeptag-admin/category/categories/categories.component.ts");
+/* harmony import */ var _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./Jeptag-admin/category/add-category/add-category.component */ "./src/app/Jeptag-admin/category/add-category/add-category.component.ts");
+/* harmony import */ var _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./Jeptag-admin/brand/brand-listing/brand-listing.component */ "./src/app/Jeptag-admin/brand/brand-listing/brand-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./Jeptag-admin/brand/add-brands/add-brands.component */ "./src/app/Jeptag-admin/brand/add-brands/add-brands.component.ts");
+/* harmony import */ var _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component */ "./src/app/Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/add-subcat/add-subcat.component */ "./src/app/Jeptag-admin/sub-category/add-subcat/add-subcat.component.ts");
+/* harmony import */ var _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./Jeptag-admin/Stores/edit-store/edit-store.component */ "./src/app/Jeptag-admin/Stores/edit-store/edit-store.component.ts");
+/* harmony import */ var _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./Jeptag-admin/Products/edit-products/edit-products.component */ "./src/app/Jeptag-admin/Products/edit-products/edit-products.component.ts");
+/* harmony import */ var _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./Jeptag-admin/Tags/taglist/taglist.component */ "./src/app/Jeptag-admin/Tags/taglist/taglist.component.ts");
+/* harmony import */ var _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./Jeptag-admin/Tags/add-tag/add-tag.component */ "./src/app/Jeptag-admin/Tags/add-tag/add-tag.component.ts");
+
 
 
 
@@ -7685,65 +7687,66 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
-                _Core_header_header_component__WEBPACK_IMPORTED_MODULE_18__["HeaderComponent"],
-                _Core_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_19__["SidebarComponent"],
-                _Core_footer_footer_component__WEBPACK_IMPORTED_MODULE_20__["FooterComponent"],
-                _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_31__["AddProductComponent"],
-                _Core_login_login_component__WEBPACK_IMPORTED_MODULE_22__["LoginComponent"],
-                _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__["DashboardComponent"],
-                _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_24__["PageNotFoundComponent"],
-                _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_9__["SalesComponent"],
-                _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_25__["UsersComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
+                _Core_header_header_component__WEBPACK_IMPORTED_MODULE_19__["HeaderComponent"],
+                _Core_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_20__["SidebarComponent"],
+                _Core_footer_footer_component__WEBPACK_IMPORTED_MODULE_21__["FooterComponent"],
+                _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_32__["AddProductComponent"],
+                _Core_login_login_component__WEBPACK_IMPORTED_MODULE_23__["LoginComponent"],
+                _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_24__["DashboardComponent"],
+                _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_25__["PageNotFoundComponent"],
+                _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_10__["SalesComponent"],
+                _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_26__["UsersComponent"],
                 // EventsComponent,
                 // JoblistComponent,
                 // AddJobComponent,
                 // AddEventComponent,
-                _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_26__["AddUserComponent"],
-                _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_27__["EditUserComponent"],
-                _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_28__["ProductListingComponent"],
-                _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_29__["StoreListingComponent"],
-                _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_30__["AddStoreComponent"],
-                _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_32__["CategoriesComponent"],
-                _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_33__["AddCategoryComponent"],
-                _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_34__["BrandListingComponent"],
-                _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_35__["AddBrandsComponent"],
-                _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_36__["SubCategoryListingComponent"],
-                _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_37__["AddSubcatComponent"],
-                _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_38__["EditStoreComponent"],
-                _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_39__["EditProductsComponent"],
-                _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_40__["TaglistComponent"],
-                _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_41__["AddTagComponent"],
+                _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_27__["AddUserComponent"],
+                _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_28__["EditUserComponent"],
+                _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_29__["ProductListingComponent"],
+                _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_30__["StoreListingComponent"],
+                _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_31__["AddStoreComponent"],
+                _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_33__["CategoriesComponent"],
+                _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_34__["AddCategoryComponent"],
+                _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_35__["BrandListingComponent"],
+                _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_36__["AddBrandsComponent"],
+                _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_37__["SubCategoryListingComponent"],
+                _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_38__["AddSubcatComponent"],
+                _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_39__["EditStoreComponent"],
+                _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_40__["EditProductsComponent"],
+                _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_41__["TaglistComponent"],
+                _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_42__["AddTagComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatPaginatorModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatProgressBarModule"],
-                _Shared_shared_module__WEBPACK_IMPORTED_MODULE_8__["SharedModule"],
-                ng_apexcharts__WEBPACK_IMPORTED_MODULE_7__["NgApexchartsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCheckboxModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"],
+                _Shared_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"],
+                ng_apexcharts__WEBPACK_IMPORTED_MODULE_8__["NgApexchartsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
-                _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_17__["NgSelectModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDatepickerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatProgressSpinnerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSelectModule"],
+                _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_18__["NgSelectModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDatepickerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSelectModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"]
             ],
-            providers: [_Services_http_service__WEBPACK_IMPORTED_MODULE_12__["HttpService"],
-                _Services_auth_service__WEBPACK_IMPORTED_MODULE_21__["AuthService"],
-                _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_14__["SalesReportResolver"],
-                _Services_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuardService"],
-                _Services_data_sharing_service__WEBPACK_IMPORTED_MODULE_16__["DataSharingService"],
-                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"], useClass: _Services_interceptor_service__WEBPACK_IMPORTED_MODULE_13__["InterceptorService"], multi: true }
+            providers: [_Services_http_service__WEBPACK_IMPORTED_MODULE_13__["HttpService"],
+                _Services_auth_service__WEBPACK_IMPORTED_MODULE_22__["AuthService"],
+                _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_15__["SalesReportResolver"],
+                _Services_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuardService"],
+                _Services_data_sharing_service__WEBPACK_IMPORTED_MODULE_17__["DataSharingService"],
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_6__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_6__["HashLocationStrategy"] },
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"], useClass: _Services_interceptor_service__WEBPACK_IMPORTED_MODULE_14__["InterceptorService"], multi: true }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;

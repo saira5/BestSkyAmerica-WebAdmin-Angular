@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import {
   MatTableModule, MatPaginatorModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatCheckboxModule,
   MatDatepickerModule,
@@ -131,7 +133,9 @@ import { AddTagComponent } from './Jeptag-admin/Tags/add-tag/add-tag.component';
     SalesReportResolver,
     AuthGuardService,
     DataSharingService,
-    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+
   ],
 
   bootstrap: [AppComponent]
