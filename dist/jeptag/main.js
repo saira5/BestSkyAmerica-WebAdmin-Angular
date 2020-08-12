@@ -23,6 +23,102 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.css":
+/*!***************************************************************************************!*\
+  !*** ./src/app/Core/confirm-password/confirm-password/confirm-password.component.css ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvcmUvY29uZmlybS1wYXNzd29yZC9jb25maXJtLXBhc3N3b3JkL2NvbmZpcm0tcGFzc3dvcmQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.html":
+/*!****************************************************************************************!*\
+  !*** ./src/app/Core/confirm-password/confirm-password/confirm-password.component.html ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\n  <input [(ngModel)]=\"model.username\" name=\"email\" placeholder=\"email\" />\n  <input [(ngModel)]=\"model.password\" name=\"password\" placeholder=\"passoword\" />\n  <button type=\"submit\">Login</button>\n</form> -->\n\n<body class=\"dashboard \" style=\"background-size:100%; \">\n\n\n  <div class=\"app-main\">\n    <div class=\"app-main__outer\">\n      <div class=\"\">\n\n        <div class=\"h-100 bg-plum-plate1 bg-animation\">\n          <div class=\"d-flex h-100 justify-content-center align-items-center\">\n            <div class=\"mx-auto app-login-box col-md-3\">\n              <div class=\"modal-dialog w-100 mx-auto\">\n                <div class=\"modal-content\">\n                  <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\n                    <div class=\"modal-body\">\n                      <mat-progress-bar *ngIf=\"loginPressed\"  mode=\"indeterminate\"></mat-progress-bar>\n                      <div class=\" modal-title text-center mb-3\">\n                        <div class=\"app-logo-inverse mx-auto mb-3 mt-2 text-center\"> <img\n                            src=\"assets/images/ic_logo.PNG\" height=\"150\" /> </div>\n\n                        <h4 class=\"mt-2\">\n                          <div>Change Password </div>\n                        </h4>\n\n\n\n                      </div>\n                      <br />\n                      <!-- <?php include(\"_form.php\") ?> -->\n                     \n                      <div class=\"form-row\">\n                        <div class=\"col-md-12\">\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.username\" name=\"email\"\n                              placeholder=\"email\" id=\"exampleEmail\" type=\"email\" placeholder=\"Email here...\"\n                              class=\"form-control\"></div>\n                        </div>\n\n                        <div class=\"col-md-12\">\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.password\" name=\"email\"\n                              placeholder=\"email\" id=\"exampleEmail\" type=\"password\" placeholder=\"Password here...\"\n                              class=\"form-control\"></div>\n                        </div>\n                       \n                        <div class=\"col-md-12\">\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.mpassword\" name=\"password\"\n                              id=\"examplePassword\" placeholder=\"Confirm Password here...\" type=\"password\" class=\"form-control\">\n                          </div>\n                        </div>\n                      </div>\n                      <!-- <h6 class=\"mt-2\">                \n                          <a routerLink='/forgetPassword' class=\"mm-active\">Forget Password?</a>                 \n                      </h6> -->\n                      <p style=\"color: red;\" *ngIf=\"loginError\">{{error_message}}</p>\n\n                      \n                    </div>\n                  \n                    <div class=\"modal-footer1 clearfix\">\n                  \n                      <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\">Change Password</button>\n    \n\n                    </div>\n                  </form>\n                </div>\n              </div>\n              <div class=\"text-center text-white opacity-8 mt-3\">Copyright © 2020 </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n    </div>\n\n  </div>\n\n</body>"
+
+/***/ }),
+
+/***/ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.ts":
+/*!**************************************************************************************!*\
+  !*** ./src/app/Core/confirm-password/confirm-password/confirm-password.component.ts ***!
+  \**************************************************************************************/
+/*! exports provided: ConfirmPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmPasswordComponent", function() { return ConfirmPasswordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Jeptag_admin_Services_forget_password_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Jeptag-admin/Services/forget-password.service */ "./src/app/Jeptag-admin/Services/forget-password.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Shared/swalAlerts */ "./src/app/Shared/swalAlerts.ts");
+
+
+
+
+
+var ConfirmPasswordComponent = /** @class */ (function () {
+    function ConfirmPasswordComponent(ForgetPasswordService, router) {
+        this.ForgetPasswordService = ForgetPasswordService;
+        this.router = router;
+        this.model = {};
+        this.loaded = false;
+    }
+    ConfirmPasswordComponent.prototype.ngOnInit = function () {
+    };
+    ConfirmPasswordComponent.prototype.onSubmit = function () {
+        var _this = this;
+        //   let categories = this.productService.getCategories();
+        console.log("USERNAME" + this.model['username']);
+        if (this.model['password'] == this.model['mpassword']) {
+            var verify = this.ForgetPasswordService.changePassword(this.model['username'], this.model['password']);
+            verify.subscribe(function (result) {
+                console.log("VERIFY RESULT :", result);
+                _this.compareResult = result;
+                console.log("VERIFY RESULT :", _this.compareResult);
+                if (_this.compareResult == "Password Reset Successfully") {
+                    _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].sucessAlert('', 'Password Reset Succesfully!');
+                    _this.router.navigate(['']);
+                }
+                else {
+                    _this.loaded = true;
+                    _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].errorAlert('', "Server Error");
+                }
+                // if (result!=null) {
+                // //  this.generateForm(this.product);
+                // }
+            }, function (err) {
+                console.log(err);
+                _this.loaded = true;
+            });
+        }
+        else {
+            _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].errorAlert('', "Password does not match");
+        }
+    };
+    ConfirmPasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-confirm-password',
+            template: __webpack_require__(/*! ./confirm-password.component.html */ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.html"),
+            styles: [__webpack_require__(/*! ./confirm-password.component.css */ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Jeptag_admin_Services_forget_password_service__WEBPACK_IMPORTED_MODULE_1__["ForgetPasswordService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], ConfirmPasswordComponent);
+    return ConfirmPasswordComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Core/dashboard/dashboard.component.html":
 /*!*********************************************************!*\
   !*** ./src/app/Core/dashboard/dashboard.component.html ***!
@@ -156,6 +252,130 @@ var FooterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Core/forget-password/forget-password/forget-password.component.css":
+/*!************************************************************************************!*\
+  !*** ./src/app/Core/forget-password/forget-password/forget-password.component.css ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvcmUvZm9yZ2V0LXBhc3N3b3JkL2ZvcmdldC1wYXNzd29yZC9mb3JnZXQtcGFzc3dvcmQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/Core/forget-password/forget-password/forget-password.component.html":
+/*!*************************************************************************************!*\
+  !*** ./src/app/Core/forget-password/forget-password/forget-password.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\n  <input [(ngModel)]=\"model.username\" name=\"email\" placeholder=\"email\" />\n  <input [(ngModel)]=\"model.password\" name=\"password\" placeholder=\"passoword\" />\n  <button type=\"submit\">Login</button>\n</form> -->\n\n<body class=\"dashboard \" style=\"background-size:100%; \">\n\n\n  <div class=\"app-main\">\n    <div class=\"app-main__outer\">\n      <div class=\"\">\n\n        <div class=\"h-100 bg-plum-plate1 bg-animation\">\n          <div class=\"d-flex h-100 justify-content-center align-items-center\">\n            <div class=\"mx-auto app-login-box col-md-3\">\n              <div class=\"modal-dialog w-100 mx-auto\">\n                <div class=\"modal-content\">\n                  <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\n                    <div class=\"modal-body\">\n                      <mat-progress-bar *ngIf=\"loginPressed\"  mode=\"indeterminate\"></mat-progress-bar>\n                      <div class=\" modal-title text-center mb-3\">\n                        <div class=\"app-logo-inverse mx-auto mb-3 mt-2 text-center\"> <img\n                            src=\"assets/images/ic_logo.PNG\" height=\"150\" /> </div>\n\n                        <h4 class=\"mt-2\">\n                          <div>Forget Password </div>\n                        </h4>\n\n\n\n                      </div>\n                      <br />\n                      <!-- <?php include(\"_form.php\") ?> -->\n                     \n                      <div class=\"form-row\">\n                        <div class=\"col-md-12\">\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.username\" name=\"email\"\n                              placeholder=\"email\" id=\"exampleEmail\" type=\"email\" placeholder=\"Email here...\"\n                              class=\"form-control\"></div>\n                        </div>\n                       \n                        <div class=\"col-md-12\">\n                          <div *ngIf=codeStatus class=\"position-relative form-group\"><input [(ngModel)]=\"model.code\" name=\"password\"\n                              id=\"examplePassword\" placeholder=\"Verification code here...\"  class=\"form-control\">\n                          </div>\n                        </div>                     \n                      </div>\n                      <!-- <h6 class=\"mt-2\">                \n                          <a routerLink='/forgetPassword' class=\"mm-active\">Forget Password?</a>                 \n                      </h6> -->\n                      <p style=\"color: red;\" *ngIf=\"loginError\">{{error_message}}</p>\n\n                      \n                    </div>\n                  \n                    <div class=\"modal-footer1 clearfix\">\n                  \n                      <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\"> Verify Email</button>\n    \n\n                    </div>\n                  </form>\n                </div>\n              </div>\n              <div class=\"text-center text-white opacity-8 mt-3\">Copyright © 2020 </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n    </div>\n\n  </div>\n\n</body>"
+
+/***/ }),
+
+/***/ "./src/app/Core/forget-password/forget-password/forget-password.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/Core/forget-password/forget-password/forget-password.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: ForgetPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgetPasswordComponent", function() { return ForgetPasswordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Jeptag_admin_Services_forget_password_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Jeptag-admin/Services/forget-password.service */ "./src/app/Jeptag-admin/Services/forget-password.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Shared/swalAlerts */ "./src/app/Shared/swalAlerts.ts");
+
+
+
+
+
+var ForgetPasswordComponent = /** @class */ (function () {
+    function ForgetPasswordComponent(ForgetPasswordService, router) {
+        this.ForgetPasswordService = ForgetPasswordService;
+        this.router = router;
+        this.model = {};
+        this.loaded = false;
+        this.codeStatus = false;
+        this.flag = false;
+    }
+    ForgetPasswordComponent.prototype.ngOnInit = function () {
+    };
+    ForgetPasswordComponent.prototype.onSubmit = function () {
+        var _this = this;
+        //   let categories = this.productService.getCategories();
+        if (this.flag == false) {
+            console.log("FLAG IS false");
+            console.log("USERNAME" + this.model['username']);
+            var verify = this.ForgetPasswordService.verifyEmail(this.model['username']);
+            verify.subscribe(function (result) {
+                var compareString = "Please Check your email for reset code.";
+                console.log("VERIFY RESULT :", result);
+                _this.resultString = result['result'];
+                if (result != null) {
+                    console.log("Inside result", _this.resultString + "COMPAREE TO" + compareString);
+                    if (_this.resultString === compareString) {
+                        _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].sucessAlert('', 'Verification Code sent to email!');
+                        // if(this.resultString==="Please Check your email for reset code."){
+                        _this.ForgetPasswordService.code = result['code'];
+                        _this.code = result['code'];
+                        _this.codeStatus = true;
+                        _this.flag = true;
+                        console.log("INSIDE IF CHECK", _this.ForgetPasswordService.code);
+                        //this.router.navigate(['Verification']);
+                    }
+                    else {
+                        _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].errorAlert('', "Email does not exist");
+                    }
+                }
+                else {
+                    _this.loaded = true;
+                    _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].errorAlert('', "Server Error");
+                }
+            }, function (err) {
+                console.log(err);
+                _this.loaded = true;
+            });
+        }
+        else {
+            console.log("FLAG IS TRUE");
+            console.log("CODE MATCHED", this.model['code']);
+            if (this.model['code'] == this.code) {
+                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].sucessAlert('', 'Code Matched!');
+                this.router.navigate(['confirmPassword']);
+            }
+            else {
+                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].errorAlert('', "Code doesnot matched");
+            }
+        }
+        //  }else{
+        // if(this.model['code']== this.ForgetPasswordService.code){
+        //   console.log("CODE MATCHED",this.model['code']);
+        //     this.router.navigate(['Verification']);
+        // }else{
+        //   SwalAlert.errorAlert('', "Code doesnot matched");
+        // }
+        //  }
+    };
+    ForgetPasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-forget-password',
+            template: __webpack_require__(/*! ./forget-password.component.html */ "./src/app/Core/forget-password/forget-password/forget-password.component.html"),
+            styles: [__webpack_require__(/*! ./forget-password.component.css */ "./src/app/Core/forget-password/forget-password/forget-password.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Jeptag_admin_Services_forget_password_service__WEBPACK_IMPORTED_MODULE_1__["ForgetPasswordService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], ForgetPasswordComponent);
+    return ForgetPasswordComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Core/header/header.component.css":
 /*!**************************************************!*\
   !*** ./src/app/Core/header/header.component.css ***!
@@ -242,7 +462,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\r\n  <input [(ngModel)]=\"model.username\" name=\"email\" placeholder=\"email\" />\r\n  <input [(ngModel)]=\"model.password\" name=\"password\" placeholder=\"passoword\" />\r\n  <button type=\"submit\">Login</button>\r\n</form> -->\r\n\r\n<body class=\"dashboard \" style=\"background-size:100%; \">\r\n\r\n\r\n  <div class=\"app-main\">\r\n    <div class=\"app-main__outer\">\r\n      <div class=\"\">\r\n\r\n        <div class=\"h-100 bg-plum-plate1 bg-animation\">\r\n          <div class=\"d-flex h-100 justify-content-center align-items-center\">\r\n            <div class=\"mx-auto app-login-box col-md-3\">\r\n              <div class=\"modal-dialog w-100 mx-auto\">\r\n                <div class=\"modal-content\">\r\n                  <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\r\n                    <div class=\"modal-body\">\r\n                      <mat-progress-bar *ngIf=\"loginPressed\"  mode=\"indeterminate\"></mat-progress-bar>\r\n                      <div class=\" modal-title text-center mb-3\">\r\n                        <div class=\"app-logo-inverse mx-auto mb-3 mt-2 text-center\"> <img\r\n                            src=\"assets/images/ic_logo.PNG\" height=\"150\" /> </div>\r\n\r\n                        <h4 class=\"mt-2\">\r\n                          <div>Welcome! <br /> Sign in to your account </div>\r\n                        </h4>\r\n\r\n\r\n\r\n                      </div>\r\n                      <br />\r\n                      <!-- <?php include(\"_form.php\") ?> -->\r\n                     \r\n                      <div class=\"form-row\">\r\n                        <div class=\"col-md-12\">\r\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.username\" name=\"email\"\r\n                              placeholder=\"email\" id=\"exampleEmail\" type=\"email\" placeholder=\"Email here...\"\r\n                              class=\"form-control\"></div>\r\n                        </div>\r\n                        <div class=\"col-md-12\">\r\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.password\" name=\"password\"\r\n                              id=\"examplePassword\" placeholder=\"Password here...\" type=\"password\" class=\"form-control\">\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <p style=\"color: red;\" *ngIf=\"loginError\">{{error_message}}</p>\r\n\r\n\r\n                    </div>\r\n                    <div class=\"modal-footer1 clearfix\">\r\n                  \r\n                      <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\"> Login to Dashboard</button>\r\n                        \r\n\r\n                    </div>\r\n                  </form>\r\n                </div>\r\n              </div>\r\n              <div class=\"text-center text-white opacity-8 mt-3\">Copyright © 2020 </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</body>"
+module.exports = "<!-- <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\r\n  <input [(ngModel)]=\"model.username\" name=\"email\" placeholder=\"email\" />\r\n  <input [(ngModel)]=\"model.password\" name=\"password\" placeholder=\"passoword\" />\r\n  <button type=\"submit\">Login</button>\r\n</form> -->\r\n\r\n<body class=\"dashboard \" style=\"background-size:100%; \">\r\n\r\n\r\n  <div class=\"app-main\">\r\n    <div class=\"app-main__outer\">\r\n      <div class=\"\">\r\n\r\n        <div class=\"h-100 bg-plum-plate1 bg-animation\">\r\n          <div class=\"d-flex h-100 justify-content-center align-items-center\">\r\n            <div class=\"mx-auto app-login-box col-md-3\">\r\n              <div class=\"modal-dialog w-100 mx-auto\">\r\n                <div class=\"modal-content\">\r\n                  <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\r\n                    <div class=\"modal-body\">\r\n                      <mat-progress-bar *ngIf=\"loginPressed\"  mode=\"indeterminate\"></mat-progress-bar>\r\n                      <div class=\" modal-title text-center mb-3\">\r\n                        <div class=\"app-logo-inverse mx-auto mb-3 mt-2 text-center\"> <img\r\n                            src=\"assets/images/ic_logo.PNG\" height=\"150\" /> </div>\r\n\r\n                        <h4 class=\"mt-2\">\r\n                          <div>Welcome! <br /> Sign in to your account </div>\r\n                        </h4>\r\n\r\n\r\n\r\n                      </div>\r\n                      <br />\r\n                      <!-- <?php include(\"_form.php\") ?> -->\r\n                     \r\n                      <div class=\"form-row\">\r\n                        <div class=\"col-md-12\">\r\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.username\" name=\"email\"\r\n                              placeholder=\"email\" id=\"exampleEmail\" type=\"email\" placeholder=\"Email here...\"\r\n                              class=\"form-control\"></div>\r\n                        </div>\r\n                       \r\n                        <div class=\"col-md-12\">\r\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.password\" name=\"password\"\r\n                              id=\"examplePassword\" placeholder=\"Password here...\" type=\"password\" class=\"form-control\">\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <h6 class=\"mt-2\">                \r\n                          <a routerLink='/forgetPassword' class=\"mm-active\">Forget Password?</a>                 \r\n                      </h6>\r\n                      <p style=\"color: red;\" *ngIf=\"loginError\">{{error_message}}</p>\r\n\r\n                      \r\n                    </div>\r\n                  \r\n                    <div class=\"modal-footer1 clearfix\">\r\n                  \r\n                      <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\"> Login to Dashboard</button>\r\n                        \r\n\r\n                    </div>\r\n                  </form>\r\n                </div>\r\n              </div>\r\n              <div class=\"text-center text-white opacity-8 mt-3\">Copyright © 2020 </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</body>"
 
 /***/ }),
 
@@ -428,6 +648,95 @@ var SidebarComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], SidebarComponent);
     return SidebarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Core/verification/verification.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/Core/verification/verification.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvcmUvdmVyaWZpY2F0aW9uL3ZlcmlmaWNhdGlvbi5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/Core/verification/verification.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/Core/verification/verification.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\n  <input [(ngModel)]=\"model.username\" name=\"email\" placeholder=\"email\" />\n  <input [(ngModel)]=\"model.password\" name=\"password\" placeholder=\"passoword\" />\n  <button type=\"submit\">Login</button>\n</form> -->\n\n<body class=\"dashboard \" style=\"background-size:100%; \">\n\n\n  <div class=\"app-main\">\n    <div class=\"app-main__outer\">\n      <div class=\"\">\n\n        <div class=\"h-100 bg-plum-plate1 bg-animation\">\n          <div class=\"d-flex h-100 justify-content-center align-items-center\">\n            <div class=\"mx-auto app-login-box col-md-3\">\n              <div class=\"modal-dialog w-100 mx-auto\">\n                <div class=\"modal-content\">\n                  <form novalidate #f=\"ngForm\" (ngSubmit)=\"f.form.valid && onSubmit()\">\n                    <div class=\"modal-body\">\n                      <mat-progress-bar *ngIf=\"loginPressed\"  mode=\"indeterminate\"></mat-progress-bar>\n                      <div class=\" modal-title text-center mb-3\">\n                        <div class=\"app-logo-inverse mx-auto mb-3 mt-2 text-center\"> <img\n                            src=\"assets/images/ic_logo.PNG\" height=\"150\" /> </div>\n\n                        <h4 class=\"mt-2\">\n                          <div> Email Verification </div>\n                        </h4>\n\n\n\n                      </div>\n                      <br />\n                      <!-- <?php include(\"_form.php\") ?> -->\n                     \n                      <div class=\"form-row\">\n                        <div class=\"col-md-12\">\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.username\" name=\"email\"\n                              placeholder=\"email\" id=\"exampleEmail\" type=\"email\" placeholder=\"Email here...\"\n                              class=\"form-control\"></div>\n                        </div>\n                       \n                        <!-- <div class=\"col-md-12\">\n                          <div class=\"position-relative form-group\"><input [(ngModel)]=\"model.password\" name=\"password\"\n                              id=\"examplePassword\" placeholder=\"Password here...\" type=\"password\" class=\"form-control\">\n                          </div>\n                        </div> -->\n                      </div>\n                      <!-- <h6 class=\"mt-2\">                \n                          <a routerLink='/forgetPassword' class=\"mm-active\">Forget Password?</a>                 \n                      </h6> -->\n                      <p style=\"color: red;\" *ngIf=\"loginError\">{{error_message}}</p>\n\n                      \n                    </div>\n                  \n                    <div class=\"modal-footer1 clearfix\">\n                  \n                      <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\"> Verify code</button>\n    \n\n                    </div>\n                  </form>\n                </div>\n              </div>\n              <div class=\"text-center text-white opacity-8 mt-3\">Copyright © 2020 </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n    </div>\n\n  </div>\n\n</body>"
+
+/***/ }),
+
+/***/ "./src/app/Core/verification/verification.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/Core/verification/verification.component.ts ***!
+  \*************************************************************/
+/*! exports provided: VerificationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificationComponent", function() { return VerificationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Jeptag_admin_Services_forget_password_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../Jeptag-admin/Services/forget-password.service */ "./src/app/Jeptag-admin/Services/forget-password.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Shared/swalAlerts */ "./src/app/Shared/swalAlerts.ts");
+
+
+
+
+
+var VerificationComponent = /** @class */ (function () {
+    function VerificationComponent(ForgetPasswordService, router) {
+        this.ForgetPasswordService = ForgetPasswordService;
+        this.router = router;
+        this.model = {};
+        this.loaded = false;
+    }
+    VerificationComponent.prototype.ngOnInit = function () {
+        this.code = this.ForgetPasswordService.getCode();
+        console.log("CODE", this.code);
+    };
+    VerificationComponent.prototype.onSubmit = function () {
+        var _this = this;
+        //   let categories = this.productService.getCategories();
+        console.log("USERNAME" + this.model['username']);
+        var verify = this.ForgetPasswordService.verifyEmail(this.model['username']);
+        verify.subscribe(function (result) {
+            console.log("VERIFY RESULT :" + result);
+            _this.result = result['result'];
+            console.log('product by id:', result);
+            if (result != null) {
+                //  this.generateForm(this.product);
+            }
+            else {
+                _this.loaded = true;
+                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_4__["SwalAlert"].errorAlert('', "Can not get the product");
+            }
+        }, function (err) {
+            console.log(err);
+            _this.loaded = true;
+        });
+    };
+    VerificationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-verification',
+            template: __webpack_require__(/*! ./verification.component.html */ "./src/app/Core/verification/verification.component.html"),
+            styles: [__webpack_require__(/*! ./verification.component.css */ "./src/app/Core/verification/verification.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Jeptag_admin_Services_forget_password_service__WEBPACK_IMPORTED_MODULE_1__["ForgetPasswordService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], VerificationComponent);
+    return VerificationComponent;
 }());
 
 
@@ -1890,6 +2199,52 @@ var CategoryService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"]])
     ], CategoryService);
     return CategoryService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Jeptag-admin/Services/forget-password.service.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/Jeptag-admin/Services/forget-password.service.ts ***!
+  \******************************************************************/
+/*! exports provided: ForgetPasswordService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgetPasswordService", function() { return ForgetPasswordService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _Services_http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Services/http.service */ "./src/app/Services/http.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
+
+
+var ForgetPasswordService = /** @class */ (function () {
+    function ForgetPasswordService(httpServices) {
+        this.httpServices = httpServices;
+    }
+    ForgetPasswordService.prototype.getCode = function () {
+        return this.code;
+    };
+    ForgetPasswordService.prototype.verifyEmail = function (username) {
+        return this.httpServices.post({ 'username': username }, '/api/user/forgetpassAdmin').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])({ error: true, message: 'Server error', data: [] }); }));
+    };
+    ForgetPasswordService.prototype.changePassword = function (username, newPassword) {
+        return this.httpServices.post({ 'username': username, 'newPassword': newPassword }, '/api/user/resetforgetpass').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])({ error: true, message: 'Server error', data: [] }); }));
+    };
+    ForgetPasswordService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"]])
+    ], ForgetPasswordService);
+    return ForgetPasswordService;
 }());
 
 
@@ -7361,34 +7716,38 @@ var validation_patterns = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jeptag-admin/Stores/edit-store/edit-store.component */ "./src/app/Jeptag-admin/Stores/edit-store/edit-store.component.ts");
-/* harmony import */ var _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/edit-user/edit-user.component */ "./src/app/Jeptag-admin/UserManagment/edit-user/edit-user.component.ts");
-/* harmony import */ var _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/add-user/add-user.component */ "./src/app/Jeptag-admin/UserManagment/add-user/add-user.component.ts");
-/* harmony import */ var _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/users/users.component */ "./src/app/Jeptag-admin/UserManagment/users/users.component.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Services/sales-report.resolver */ "./src/app/Services/sales-report.resolver.ts");
-/* harmony import */ var _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Jeptag-admin/Reports/sales/sales.component */ "./src/app/Jeptag-admin/Reports/sales/sales.component.ts");
-/* harmony import */ var _Services_auth_guard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Services/auth-guard */ "./src/app/Services/auth-guard.ts");
-/* harmony import */ var _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Core/dashboard/dashboard.component */ "./src/app/Core/dashboard/dashboard.component.ts");
-/* harmony import */ var _Core_login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Core/login/login.component */ "./src/app/Core/login/login.component.ts");
-/* harmony import */ var _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Core/page-not-found/page-not-found.component */ "./src/app/Core/page-not-found/page-not-found.component.ts");
-/* harmony import */ var _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Jeptag-admin/Products/product-listing/product-listing.component */ "./src/app/Jeptag-admin/Products/product-listing/product-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Jeptag-admin/Stores/store-listing/store-listing.component */ "./src/app/Jeptag-admin/Stores/store-listing/store-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Jeptag-admin/Stores/add-store/add-store.component */ "./src/app/Jeptag-admin/Stores/add-store/add-store.component.ts");
-/* harmony import */ var _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Jeptag-admin/Products/add-product/add-product.component */ "./src/app/Jeptag-admin/Products/add-product/add-product.component.ts");
-/* harmony import */ var _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Jeptag-admin/category/categories/categories.component */ "./src/app/Jeptag-admin/category/categories/categories.component.ts");
-/* harmony import */ var _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Jeptag-admin/category/add-category/add-category.component */ "./src/app/Jeptag-admin/category/add-category/add-category.component.ts");
-/* harmony import */ var _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Jeptag-admin/brand/brand-listing/brand-listing.component */ "./src/app/Jeptag-admin/brand/brand-listing/brand-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Jeptag-admin/brand/add-brands/add-brands.component */ "./src/app/Jeptag-admin/brand/add-brands/add-brands.component.ts");
-/* harmony import */ var _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component */ "./src/app/Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component.ts");
-/* harmony import */ var _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/add-subcat/add-subcat.component */ "./src/app/Jeptag-admin/sub-category/add-subcat/add-subcat.component.ts");
-/* harmony import */ var _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Jeptag-admin/Products/edit-products/edit-products.component */ "./src/app/Jeptag-admin/Products/edit-products/edit-products.component.ts");
-/* harmony import */ var _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Jeptag-admin/Tags/taglist/taglist.component */ "./src/app/Jeptag-admin/Tags/taglist/taglist.component.ts");
-/* harmony import */ var _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Jeptag-admin/Tags/add-tag/add-tag.component */ "./src/app/Jeptag-admin/Tags/add-tag/add-tag.component.ts");
+/* harmony import */ var _Core_forget_password_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Core/forget-password/forget-password/forget-password.component */ "./src/app/Core/forget-password/forget-password/forget-password.component.ts");
+/* harmony import */ var _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Jeptag-admin/Stores/edit-store/edit-store.component */ "./src/app/Jeptag-admin/Stores/edit-store/edit-store.component.ts");
+/* harmony import */ var _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/edit-user/edit-user.component */ "./src/app/Jeptag-admin/UserManagment/edit-user/edit-user.component.ts");
+/* harmony import */ var _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/add-user/add-user.component */ "./src/app/Jeptag-admin/UserManagment/add-user/add-user.component.ts");
+/* harmony import */ var _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Jeptag-admin/UserManagment/users/users.component */ "./src/app/Jeptag-admin/UserManagment/users/users.component.ts");
+/* harmony import */ var _Core_confirm_password_confirm_password_confirm_password_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Core/confirm-password/confirm-password/confirm-password.component */ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Services/sales-report.resolver */ "./src/app/Services/sales-report.resolver.ts");
+/* harmony import */ var _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Jeptag-admin/Reports/sales/sales.component */ "./src/app/Jeptag-admin/Reports/sales/sales.component.ts");
+/* harmony import */ var _Services_auth_guard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Services/auth-guard */ "./src/app/Services/auth-guard.ts");
+/* harmony import */ var _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Core/dashboard/dashboard.component */ "./src/app/Core/dashboard/dashboard.component.ts");
+/* harmony import */ var _Core_login_login_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Core/login/login.component */ "./src/app/Core/login/login.component.ts");
+/* harmony import */ var _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Core/page-not-found/page-not-found.component */ "./src/app/Core/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Jeptag-admin/Products/product-listing/product-listing.component */ "./src/app/Jeptag-admin/Products/product-listing/product-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Jeptag-admin/Stores/store-listing/store-listing.component */ "./src/app/Jeptag-admin/Stores/store-listing/store-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Jeptag-admin/Stores/add-store/add-store.component */ "./src/app/Jeptag-admin/Stores/add-store/add-store.component.ts");
+/* harmony import */ var _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Jeptag-admin/Products/add-product/add-product.component */ "./src/app/Jeptag-admin/Products/add-product/add-product.component.ts");
+/* harmony import */ var _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Jeptag-admin/category/categories/categories.component */ "./src/app/Jeptag-admin/category/categories/categories.component.ts");
+/* harmony import */ var _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Jeptag-admin/category/add-category/add-category.component */ "./src/app/Jeptag-admin/category/add-category/add-category.component.ts");
+/* harmony import */ var _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Jeptag-admin/brand/brand-listing/brand-listing.component */ "./src/app/Jeptag-admin/brand/brand-listing/brand-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Jeptag-admin/brand/add-brands/add-brands.component */ "./src/app/Jeptag-admin/brand/add-brands/add-brands.component.ts");
+/* harmony import */ var _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component */ "./src/app/Jeptag-admin/sub-category/sub-category-listing/sub-category-listing.component.ts");
+/* harmony import */ var _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Jeptag-admin/sub-category/add-subcat/add-subcat.component */ "./src/app/Jeptag-admin/sub-category/add-subcat/add-subcat.component.ts");
+/* harmony import */ var _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Jeptag-admin/Products/edit-products/edit-products.component */ "./src/app/Jeptag-admin/Products/edit-products/edit-products.component.ts");
+/* harmony import */ var _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Jeptag-admin/Tags/taglist/taglist.component */ "./src/app/Jeptag-admin/Tags/taglist/taglist.component.ts");
+/* harmony import */ var _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./Jeptag-admin/Tags/add-tag/add-tag.component */ "./src/app/Jeptag-admin/Tags/add-tag/add-tag.component.ts");
+
 
 
 // import { AddEventComponent } from './Jeptag-admin/Events/add-event/add-event.component';
+
 
 
 
@@ -7416,31 +7775,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', component: _Core_login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], pathMatch: 'full' },
+    { path: '', component: _Core_login_login_component__WEBPACK_IMPORTED_MODULE_13__["LoginComponent"], pathMatch: 'full' },
+    { path: 'forgetPassword', component: _Core_forget_password_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_1__["ForgetPasswordComponent"]
+        // children: [
+        //   { path: 'forgetPassword/Verification', component: VerificationComponent},
+        //   {path: 'forgetPassword/Verification/confirmPassword', component: ConfirmPasswordComponent},
+        // ]
+    },
+    // { path: 'Verification', component: VerificationComponent},
+    { path: 'confirmPassword', component: _Core_confirm_password_confirm_password_confirm_password_component__WEBPACK_IMPORTED_MODULE_6__["ConfirmPasswordComponent"] },
     {
-        path: 'jeptag', component: _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], canActivate: [_Services_auth_guard__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]],
+        path: 'jeptag', component: _Core_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__["DashboardComponent"], canActivate: [_Services_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuardService"]],
         children: [
             {
-                path: '', component: _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_8__["SalesComponent"],
-            },
-            //routes for eva connect
-            {
-                path: 'user', component: _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_4__["UsersComponent"]
+                path: '', component: _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_10__["SalesComponent"],
             },
             {
-                path: 'user/add', component: _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_3__["AddUserComponent"]
+                path: 'user', component: _Jeptag_admin_UserManagment_users_users_component__WEBPACK_IMPORTED_MODULE_5__["UsersComponent"]
             },
             {
-                path: 'user/edit/:id', component: _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_2__["EditUserComponent"]
+                path: 'user/add', component: _Jeptag_admin_UserManagment_add_user_add_user_component__WEBPACK_IMPORTED_MODULE_4__["AddUserComponent"]
             },
             {
-                path: 'user/stores/:id', component: _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_14__["StoreListingComponent"]
+                path: 'user/edit/:id', component: _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_3__["EditUserComponent"]
             },
             {
-                path: 'user/stores/add/:id', component: _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_15__["AddStoreComponent"]
+                path: 'user/stores/:id', component: _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_16__["StoreListingComponent"]
             },
             {
-                path: 'products/edit/:id', component: _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_23__["EditProductsComponent"]
+                path: 'user/stores/add/:id', component: _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_17__["AddStoreComponent"]
+            },
+            {
+                path: 'products/edit/:id', component: _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_25__["EditProductsComponent"]
             },
             // {
             //   path: 'user/stores/products/:id', component: ProductListingComponent
@@ -7450,69 +7816,69 @@ var routes = [
             // },
             //ustran routes
             {
-                path: 'products', component: _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_13__["ProductListingComponent"]
+                path: 'products', component: _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_15__["ProductListingComponent"]
             },
             {
-                path: 'products/add', component: _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_16__["AddProductComponent"]
+                path: 'products/add', component: _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_18__["AddProductComponent"]
             },
             {
-                path: 'stores', component: _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_14__["StoreListingComponent"]
+                path: 'stores', component: _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_16__["StoreListingComponent"]
             },
             {
-                path: 'stores/add', component: _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_15__["AddStoreComponent"]
+                path: 'stores/add', component: _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_17__["AddStoreComponent"]
             },
             {
-                path: 'stores/edit/:id/:storeid', component: _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_1__["EditStoreComponent"]
+                path: 'stores/edit/:id/:storeid', component: _Jeptag_admin_Stores_edit_store_edit_store_component__WEBPACK_IMPORTED_MODULE_2__["EditStoreComponent"]
             },
             {
-                path: 'stores/products/:storeid/:userid', component: _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_13__["ProductListingComponent"]
+                path: 'stores/products/:storeid/:userid', component: _Jeptag_admin_Products_product_listing_product_listing_component__WEBPACK_IMPORTED_MODULE_15__["ProductListingComponent"]
             },
             {
-                path: 'stores/products/add/:storeid/:userid', component: _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_16__["AddProductComponent"]
+                path: 'stores/products/add/:storeid/:userid', component: _Jeptag_admin_Products_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_18__["AddProductComponent"]
             },
             {
-                path: 'categories', component: _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_17__["CategoriesComponent"]
+                path: 'categories', component: _Jeptag_admin_category_categories_categories_component__WEBPACK_IMPORTED_MODULE_19__["CategoriesComponent"]
             },
             {
-                path: 'categories/add', component: _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__["AddCategoryComponent"]
+                path: 'categories/add', component: _Jeptag_admin_category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_20__["AddCategoryComponent"]
             },
             {
-                path: 'subcategories', component: _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_21__["SubCategoryListingComponent"]
+                path: 'subcategories', component: _Jeptag_admin_sub_category_sub_category_listing_sub_category_listing_component__WEBPACK_IMPORTED_MODULE_23__["SubCategoryListingComponent"]
             },
             {
-                path: 'subcategories/add', component: _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_22__["AddSubcatComponent"]
+                path: 'subcategories/add', component: _Jeptag_admin_sub_category_add_subcat_add_subcat_component__WEBPACK_IMPORTED_MODULE_24__["AddSubcatComponent"]
             },
             {
-                path: 'brands', component: _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_19__["BrandListingComponent"]
+                path: 'brands', component: _Jeptag_admin_brand_brand_listing_brand_listing_component__WEBPACK_IMPORTED_MODULE_21__["BrandListingComponent"]
             },
             {
-                path: 'brands/add', component: _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_20__["AddBrandsComponent"]
+                path: 'brands/add', component: _Jeptag_admin_brand_add_brands_add_brands_component__WEBPACK_IMPORTED_MODULE_22__["AddBrandsComponent"]
             },
             {
-                path: 'tags', component: _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_24__["TaglistComponent"]
+                path: 'tags', component: _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_26__["TaglistComponent"]
             },
             {
-                path: 'tags/edit/:id', component: _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_25__["AddTagComponent"]
+                path: 'tags/edit/:id', component: _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_27__["AddTagComponent"]
             },
             {
-                path: 'sales-report', component: _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_8__["SalesComponent"], resolve: {
-                    cres: _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_7__["SalesReportResolver"]
+                path: 'sales-report', component: _Jeptag_admin_Reports_sales_sales_component__WEBPACK_IMPORTED_MODULE_10__["SalesComponent"], resolve: {
+                    cres: _Services_sales_report_resolver__WEBPACK_IMPORTED_MODULE_9__["SalesReportResolver"]
                 },
             }
         ]
     },
     {
         path: '**',
-        component: _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__["PageNotFoundComponent"]
+        component: _Core_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_14__["PageNotFoundComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_7__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -7629,6 +7995,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./Jeptag-admin/Products/edit-products/edit-products.component */ "./src/app/Jeptag-admin/Products/edit-products/edit-products.component.ts");
 /* harmony import */ var _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./Jeptag-admin/Tags/taglist/taglist.component */ "./src/app/Jeptag-admin/Tags/taglist/taglist.component.ts");
 /* harmony import */ var _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./Jeptag-admin/Tags/add-tag/add-tag.component */ "./src/app/Jeptag-admin/Tags/add-tag/add-tag.component.ts");
+/* harmony import */ var _Core_forget_password_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./Core/forget-password/forget-password/forget-password.component */ "./src/app/Core/forget-password/forget-password/forget-password.component.ts");
+/* harmony import */ var _Core_confirm_password_confirm_password_confirm_password_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./Core/confirm-password/confirm-password/confirm-password.component */ "./src/app/Core/confirm-password/confirm-password/confirm-password.component.ts");
+/* harmony import */ var _Core_verification_verification_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./Core/verification/verification.component */ "./src/app/Core/verification/verification.component.ts");
 
 
 
@@ -7681,6 +8050,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -7716,6 +8088,9 @@ var AppModule = /** @class */ (function () {
                 _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_40__["EditProductsComponent"],
                 _Jeptag_admin_Tags_taglist_taglist_component__WEBPACK_IMPORTED_MODULE_41__["TaglistComponent"],
                 _Jeptag_admin_Tags_add_tag_add_tag_component__WEBPACK_IMPORTED_MODULE_42__["AddTagComponent"],
+                _Core_forget_password_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_43__["ForgetPasswordComponent"],
+                _Core_confirm_password_confirm_password_confirm_password_component__WEBPACK_IMPORTED_MODULE_44__["ConfirmPasswordComponent"],
+                _Core_verification_verification_component__WEBPACK_IMPORTED_MODULE_45__["VerificationComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -7773,7 +8148,7 @@ var environment = {
     production: false,
     // baseUrl: 'http://192.168.10.11:3000' // staging
     //baseUrl: 'http://192.168.10.4:3000' // staging
-    //baseUrl: 'http://192.168.10.6:3000' // staging
+    //baseUrl: 'http://192.168.10.11:3000' // staging
     baseUrl: 'http://206.81.6.168' // staging
     //baseUrl:'http://192.168.43.144:3000'
     //baseUrl: 'http://168.63.140.202:8001/instamunch/' // staging

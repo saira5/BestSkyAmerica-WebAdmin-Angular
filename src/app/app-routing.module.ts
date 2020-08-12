@@ -1,23 +1,19 @@
+import { ForgetPasswordComponent } from './Core/forget-password/forget-password/forget-password.component';
 import { EditStoreComponent } from './Jeptag-admin/Stores/edit-store/edit-store.component';
 // import { AddEventComponent } from './Jeptag-admin/Events/add-event/add-event.component';
 import { EditUserComponent } from './Jeptag-admin/UserManagment/edit-user/edit-user.component';
 import { AddUserComponent } from './Jeptag-admin/UserManagment/add-user/add-user.component';
 import { UsersComponent } from './Jeptag-admin/UserManagment/users/users.component';
-
+import { ConfirmPasswordComponent } from './Core/confirm-password/confirm-password/confirm-password.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SalesReportResolver } from './Services/sales-report.resolver';
 import { SalesComponent } from './Jeptag-admin/Reports/sales/sales.component';
-
 import { AuthGuardService as AuthGuard } from './Services/auth-guard';
-
 import { DashboardComponent } from './Core/dashboard/dashboard.component';
-
 // import { AddProductComponent } from './instamunch/product/add-product/add-product.component';
-
 import { LoginComponent } from './Core/login/login.component';
 import { PageNotFoundComponent } from './Core/page-not-found/page-not-found.component';
-
 // import { JoblistComponent } from './Jeptag-admin/Jobs/joblist/joblist.component';
 // import { EventsComponent } from './Jeptag-admin/Events/events/events.component';
 import { from } from 'rxjs';
@@ -35,9 +31,20 @@ import { AddSubcatComponent } from './Jeptag-admin/sub-category/add-subcat/add-s
 import { EditProductsComponent } from './Jeptag-admin/Products/edit-products/edit-products.component';
 import { TaglistComponent } from './Jeptag-admin/Tags/taglist/taglist.component';
 import { AddTagComponent } from './Jeptag-admin/Tags/add-tag/add-tag.component';
+import { VerificationComponent } from './Core/verification/verification.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full' },
+  { path: 'forgetPassword', component: ForgetPasswordComponent
+  // children: [
+  //   { path: 'forgetPassword/Verification', component: VerificationComponent},
+
+  //   {path: 'forgetPassword/Verification/confirmPassword', component: ConfirmPasswordComponent},
+  // ]
+},
+// { path: 'Verification', component: VerificationComponent},
+
+{path: 'confirmPassword', component: ConfirmPasswordComponent},
   {
     path: 'jeptag', component: DashboardComponent, canActivate: [AuthGuard],
 
@@ -48,11 +55,7 @@ const routes: Routes = [
         // resolve: {
         //   cres: SalesReportResolver
         // }
-      },
-     
-     
-     
-      //routes for eva connect
+      },   
       {
         path: 'user', component: UsersComponent
       },
@@ -79,6 +82,7 @@ const routes: Routes = [
       //   path: 'user/stores/products/add/:id', component: AddProductComponent
       // },
 //ustran routes
+
 {
   path: 'products', component: ProductListingComponent
 },

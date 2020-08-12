@@ -6,7 +6,8 @@ export const environment = {
   production: false,
 // baseUrl: 'http://192.168.10.11:3000' // staging
 //baseUrl: 'http://192.168.10.4:3000' // staging
-//baseUrl: 'http://192.168.10.6:3000' // staging
+
+//baseUrl: 'http://192.168.10.11:3000' // staging
 
 
 

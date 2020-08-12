@@ -64,6 +64,9 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material';
 import { TaglistComponent } from './Jeptag-admin/Tags/taglist/taglist.component';
 import { AddTagComponent } from './Jeptag-admin/Tags/add-tag/add-tag.component';
+import { ForgetPasswordComponent } from './Core/forget-password/forget-password/forget-password.component';
+import { ConfirmPasswordComponent } from './Core/confirm-password/confirm-password/confirm-password.component';
+import { VerificationComponent } from './Core/verification/verification.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +104,9 @@ import { AddTagComponent } from './Jeptag-admin/Tags/add-tag/add-tag.component';
     EditProductsComponent,
     TaglistComponent,
     AddTagComponent,
+    ForgetPasswordComponent,
+    ConfirmPasswordComponent,
+    VerificationComponent,
   //  dateValidator
   ],
 
