@@ -13,5 +13,6 @@ export interface store{
     GEOLat: string,
     GEOLong:string,
     status:string,
-    createdAt: string
+    createdAt: string,
+    storeID:string
 }

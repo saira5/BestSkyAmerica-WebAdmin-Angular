@@ -35,7 +35,7 @@ export class AddStoreComponent implements OnInit {
 
     this.form['form_fields'] = this.fields;
     const store_id = this.active_route.snapshot.paramMap.get('id');
-    this.company_name = this.active_route.snapshot.paramMap.get('fname')+" "+this.active_route.snapshot.paramMap.get('lname');
+    this.company_name = this.active_route.snapshot.paramMap.get('cname');;
 
     console.log("idddd " + this.active_route.snapshot.paramMap.get('id'))
 
@@ -99,6 +99,9 @@ export class AddStoreComponent implements OnInit {
       { label: 'Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "Name", validations: [Validators.required], required: true, value: store ? store.Name : '' },
       {
         label: 'Company Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "CompanyId", validations: [Validators.required], required: true, value: this.company_name
+      },
+      {
+        label: 'Store ID', type: 'text', bootstrapGridClass: "col-lg-6", name: "storeID", validations: [Validators.required], required: true, value:store ? store.storeID : ''
       },
       {
         label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "Address", validations: [Validators.required], required: true, value: store ? store.Address : ''
