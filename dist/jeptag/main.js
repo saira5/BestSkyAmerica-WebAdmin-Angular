@@ -481,6 +481,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _Services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Services/auth.service */ "./src/app/Services/auth.service.ts");
 /* harmony import */ var _Services_data_sharing_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Services/data-sharing.service */ "./src/app/Services/data-sharing.service.ts");
+/* harmony import */ var _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Shared/swalAlerts */ "./src/app/Shared/swalAlerts.ts");
+
 
 
 
@@ -515,6 +517,7 @@ var LoginComponent = /** @class */ (function () {
             else {
                 _this.loginError = true;
                 _this.error_message = response['message'];
+                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_5__["SwalAlert"].errorAlert('', "Sign in Unsuccessful");
             }
             //  console.log(data);
         }, function (err) {
@@ -1178,6 +1181,15 @@ var AddProductComponent = /** @class */ (function () {
                     label: 'price', type: 'number', bootstrapGridClass: "col-lg-6", name: "price", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(src_app_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].postive_numbers)], required: true, value: product ? product.price : ''
                 },
                 {
+                    label: 'Condition', type: 'text', bootstrapGridClass: "col-lg-6", name: "condition", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.condition : ''
+                },
+                {
+                    label: 'Barcode', type: 'text', bootstrapGridClass: "col-lg-6", name: "barcode_type", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.barcode_type : ''
+                },
+                {
+                    label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "adress", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.adress : ''
+                },
+                {
                     label: 'Quantity', type: 'number', bootstrapGridClass: "col-lg-6", name: "alert_quantity", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(src_app_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].postive_numbers)], required: true, value: product ? product.alert_quantity : ''
                 },
                 {
@@ -1187,7 +1199,7 @@ var AddProductComponent = /** @class */ (function () {
                     label: 'SubCategory', type: 'ngselectSub', bootstrapGridClass: "col-lg-6", name: "category", value: product ? product.category : '', options: result[2]
                 },
                 {
-                    label: 'Brands', type: 'ngselect2', bootstrapGridClass: "col-lg-6", name: "brand_id", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.brand_id : '', options: result[1]
+                    label: 'Brands', type: 'ngselect2', bootstrapGridClass: "col-lg-12", name: "brand_id", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.brand_id : '', options: result[1]
                 },
                 {
                     label: 'Description', type: 'textarea', bootstrapGridClass: "col-lg-12", name: "description", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.description : ''
@@ -2685,6 +2697,7 @@ var AddStoreComponent = /** @class */ (function () {
     AddStoreComponent.prototype.ngOnInit = function () {
         this.form['form_fields'] = this.fields;
         var store_id = this.active_route.snapshot.paramMap.get('id');
+        this.company_name = this.active_route.snapshot.paramMap.get('fname') + " " + this.active_route.snapshot.paramMap.get('lname');
         console.log("idddd " + this.active_route.snapshot.paramMap.get('id'));
         //console.log("word "+this.active_route.contains("ss"))
         // if (store_id != null) {
@@ -2730,6 +2743,9 @@ var AddStoreComponent = /** @class */ (function () {
         this.fields = [
             { label: 'Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "Name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required], required: true, value: store ? store.Name : '' },
             {
+                label: 'Company Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "CompanyId", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required], required: true, value: this.company_name
+            },
+            {
                 label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "Address", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required], required: true, value: store ? store.Address : ''
             },
             {
@@ -2757,7 +2773,7 @@ var AddStoreComponent = /** @class */ (function () {
                 label: 'GEOLong', type: 'number', bootstrapGridClass: "col-lg-6", name: "GEOLong", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required], required: true, value: store ? store.GEOLong : ''
             },
             {
-                label: 'Status', type: 'select', bootstrapGridClass: "col-lg-12", name: "status", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required], required: true,
+                label: 'Status', type: 'select', bootstrapGridClass: "col-lg-6", name: "status", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required], required: true,
                 value: store ? store.status : 'true', options: _Options_product__WEBPACK_IMPORTED_MODULE_6__["Status"]
             }
         ];
@@ -3140,6 +3156,8 @@ var StoreListingComponent = /** @class */ (function () {
         if (store_id != null) {
             this.add = false;
             this.getStaffListbyID(this.currentActivatedRoute.snapshot.paramMap.get('id'));
+            this.fname = this.currentActivatedRoute.snapshot.paramMap.get('fname');
+            this.lname = this.currentActivatedRoute.snapshot.paramMap.get('lname');
         }
         else {
             this.add = true;
@@ -3308,7 +3326,7 @@ var StoreListingComponent = /** @class */ (function () {
     };
     StoreListingComponent.prototype.navigateToStoreAdd = function () {
         //   this.router.navigate(['add'], { relativeTo: this.currentActivatedRoute });
-        this.router.navigate(['jeptag/user/stores/add', this.currentActivatedRoute.snapshot.paramMap.get('id')]);
+        this.router.navigate(['jeptag/user/stores/add', this.currentActivatedRoute.snapshot.paramMap.get('id'), this.fname, this.lname]);
     };
     StoreListingComponent.prototype.navigateToStaffListing = function () {
         this.router.navigate(['/jeptag/user/stores', this.currentActivatedRoute.snapshot.paramMap.get('id')]);
@@ -3914,10 +3932,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _Services_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Services/user.service */ "./src/app/Jeptag-admin/Services/user.service.ts");
-/* harmony import */ var _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Shared/swalAlerts */ "./src/app/Shared/swalAlerts.ts");
-/* harmony import */ var _Options_staff__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Options/staff */ "./src/app/Jeptag-admin/Options/staff.ts");
-/* harmony import */ var _Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../Shared/validation_patterns */ "./src/app/Shared/validation_patterns.ts");
+/* harmony import */ var _options_staff__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../options/staff */ "./src/app/Jeptag-admin/options/staff.ts");
+/* harmony import */ var _Services_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Services/user.service */ "./src/app/Jeptag-admin/Services/user.service.ts");
+/* harmony import */ var _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Shared/swalAlerts */ "./src/app/Shared/swalAlerts.ts");
+/* harmony import */ var _Options_staff__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Options/staff */ "./src/app/Jeptag-admin/Options/staff.ts");
+/* harmony import */ var _Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Shared/validation_patterns */ "./src/app/Shared/validation_patterns.ts");
+
 
 
 
@@ -3942,19 +3962,49 @@ var AddUserComponent = /** @class */ (function () {
     };
     AddUserComponent.prototype.generateForm = function (staff) {
         this.fields = [
-            { label: 'First Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "first_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_7__["validation_patterns"].nameRegex), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.first_name : '' },
+            { label: 'First Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "first_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].nameRegex), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.first_name : '' },
             {
-                label: 'Last Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "last_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_7__["validation_patterns"].nameRegex), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.last_name : ''
+                label: 'Last Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "last_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].nameRegex), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.last_name : ''
             },
             {
-                label: 'Email', type: 'text', bootstrapGridClass: "col-lg-6", name: "email", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_7__["validation_patterns"].email_regex)], required: true, value: staff ? staff.email : ''
+                label: 'Email', type: 'text', bootstrapGridClass: "col-lg-6", name: "email", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].email_regex)], required: true, value: staff ? staff.email : ''
             },
             {
-                label: 'Password', type: 'text', bootstrapGridClass: "col-lg-6", name: "password", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_7__["validation_patterns"].password_regex)], required: true, value: staff ? staff.password : ''
+                label: 'Password', type: 'text', bootstrapGridClass: "col-lg-6", name: "password", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].password_regex)], required: true, value: staff ? staff.password : ''
+            },
+            {
+                label: 'Company Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "company_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.company_name : ''
+            },
+            {
+                label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "Address", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.Address : ''
+            },
+            {
+                label: 'City', type: 'text', bootstrapGridClass: "col-lg-6", name: "City", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.City : ''
+            },
+            {
+                label: 'Region', type: 'text', bootstrapGridClass: "col-lg-6", name: "Region", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.Region : ''
+            },
+            {
+                label: 'Country', type: 'select', bootstrapGridClass: "col-lg-6", name: "Country", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.Country : '', options: _options_staff__WEBPACK_IMPORTED_MODULE_4__["countries"]
+            },
+            {
+                label: 'Postscode', type: 'number', bootstrapGridClass: "col-lg-6", name: "Postscode", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.Postscode : ''
+            },
+            {
+                label: 'Phone', type: 'number', bootstrapGridClass: "col-lg-6", name: "Phone", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.Phone : ''
+            },
+            {
+                label: 'Fax', type: 'number', bootstrapGridClass: "col-lg-6", name: "Fax", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.Fax : ''
+            },
+            {
+                label: 'GEOLat', type: 'number', bootstrapGridClass: "col-lg-6", name: "GEOLat", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.GEOLat : ''
+            },
+            {
+                label: 'GEOLong', type: 'number', bootstrapGridClass: "col-lg-6", name: "GEOLong", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: staff ? staff.GEOLong : ''
             },
             {
                 label: 'Type', type: 'ngselect', bootstrapGridClass: "col-lg-12", name: "type", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true,
-                value: staff ? staff.roles : '', options: _Options_staff__WEBPACK_IMPORTED_MODULE_6__["StaffType"]
+                value: staff ? staff.roles : '', options: _Options_staff__WEBPACK_IMPORTED_MODULE_7__["StaffType"]
             }
         ];
         this.form['form_fields'] = this.fields;
@@ -3985,16 +4035,16 @@ var AddUserComponent = /** @class */ (function () {
         this.StaffService.addStaff(data).subscribe(function (result) {
             _this.submit_clicked = false;
             if (result['status']) {
-                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_5__["SwalAlert"].sucessAlert('', 'User Added Sucessfully!');
+                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_6__["SwalAlert"].sucessAlert('', 'User Added Sucessfully!');
                 _this.clear_form = true;
             }
             else {
-                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_5__["SwalAlert"].errorAlert('', result['message'].charAt(0).toUpperCase() + result['message'].substring(1));
+                _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_6__["SwalAlert"].errorAlert('', result['message'].charAt(0).toUpperCase() + result['message'].substring(1));
             }
         }, function (err) {
             _this.submit_clicked = false;
             console.error(err);
-            _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_5__["SwalAlert"].errorAlert('', 'Server Error');
+            _Shared_swalAlerts__WEBPACK_IMPORTED_MODULE_6__["SwalAlert"].errorAlert('', 'Server Error');
         });
     };
     AddUserComponent.prototype.navigateToProductListing = function () {
@@ -4006,7 +4056,7 @@ var AddUserComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./add-user.component.html */ "./src/app/Jeptag-admin/UserManagment/add-user/add-user.component.html"),
             styles: [__webpack_require__(/*! ./add-user.component.css */ "./src/app/Jeptag-admin/UserManagment/add-user/add-user.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Services_user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"],
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_Services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], AddUserComponent);
     return AddUserComponent;
@@ -4178,7 +4228,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-main__outer\">\r\n  <div class=\"app-main__inner\">\r\n    <div class=\"app-page-title\">\r\n      <div class=\"page-title-wrapper\">\r\n        <div class=\"page-title-heading\">\r\n          <div class=\"page-title-icon bg-warning text-white\">\r\n            <i class=\"icofont-dashboard-web  \">\r\n            </i>\r\n          </div>\r\n          <div> Users Managment\r\n            <div class=\"page-title-subheading\">Users listing\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"page-title-actions\">\r\n\r\n          <div class=\"d-inline-block dropdown\">\r\n            <a style=\"margin-left: 4px;color: white;\" class=\"btn-shadow  btn btn-info\" (click)=\"navigateToStaffAdd()\">\r\n              <i class=\"icofont-ui-add\"></i> Add New\r\n            </a>\r\n          \r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12\">\r\n\r\n        <h4 class=\"d-flex flex-wrap justify-content-between align-items-center mb-3\">\r\n          <div>Users</div>\r\n          <!-- <div class=\"col-12 col-md-3 p-0 mb-3\">\r\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">\r\n          </div> -->\r\n        </h4>\r\n        <div class=\"main-card mb-3 card\">\r\n          <!-- <div class=\"card-header\">Products\r\n                                        <div class=\"btn-actions-pane-right\">\r\n                                            <div role=\"group\" class=\"btn-group-sm btn-group\">\r\n                                                <button class=\"active btn btn-focus\">Received </button>\r\n                                                <button class=\"btn btn-focus\">Pending</button>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div> -->\r\n          <mat-progress-bar *ngIf=\"!loaded\" mode=\"indeterminate\"></mat-progress-bar>\r\n          <div class=\"card-body\">\r\n\r\n            <div class=\"table-responsive\">\r\n              <mat-form-field style=\"width: 100%;\">\r\n                <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Search...\">\r\n                <!-- (keyup)=\"applyFilter($event.target.value)\" -->\r\n              </mat-form-field>\r\n\r\n              <div class=\"mat-elevation-z8\">\r\n                <div class=\"example-container\">\r\n                  <table mat-table [dataSource]=\"dataSource\" style=\"width: 100%;\">\r\n                    <div>\r\n                      <!-- <ng-container matColumnDef=\"select\">\r\n                        <th mat-header-cell *matHeaderCellDef>\r\n                          <mat-checkbox color=\"primary\" (change)=\"$event ? masterToggle() : null\"\r\n                            [checked]=\"selection.hasValue() && isAllSelected()\"\r\n                            [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\r\n                          </mat-checkbox>\r\n                        </th>\r\n                        <td mat-cell *matCellDef=\"let row\">\r\n                          <mat-checkbox color=\"primary\" (click)=\"$event.stopPropagation()\"\r\n                            (change)=\"checkboxClicked($event,row)\" [checked]=\"selection.isSelected(row)\">\r\n                          </mat-checkbox>\r\n                        </td>\r\n                      </ng-container> -->\r\n\r\n                      <!-- <ng-container matColumnDef=\"user image\">\r\n                        <th mat-header-cell *matHeaderCellDef> </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> <img style=\"width: 30px; height: 30px;\"\r\n                            [src]=\"element.user_image!=null ? element.user_image : '../../../assets/images/no_image.png'\" />\r\n                        </td>\r\n                      </ng-container> -->\r\n\r\n                      <ng-container matColumnDef=\"name\" sticky>\r\n                        <th mat-header-cell *matHeaderCellDef> Name </th>\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                          <span> {{element.first_name}} </span>\r\n                          <span> {{element.last_name}} </span>\r\n                        </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container style=\"margin-right: 10px;\" matColumnDef=\"roles\">\r\n                        <th mat-header-cell *matHeaderCellDef> Type </th>\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                          <span class=\"badge\" [ngClass]=\"{\r\n                            'badge-info':element.roles === 'user',\r\n                            'badge-danger':element.roles === 'admin'\r\n                            \r\n                          }\"> {{element.roles | removeUnderScore | titlecase}}</span>\r\n                          <!-- {'admin': 1, 'user': 2, 'guest': 3, 'manager': 4, 'waiter': 5, 'staff': 6, 'kitchen_manager':7} -->\r\n\r\n                        </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container matColumnDef=\"Email\">\r\n                        <th mat-header-cell *matHeaderCellDef> Email </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n                      </ng-container>\r\n\r\n                      <!-- <ng-container matColumnDef=\"Salary\">\r\n                        <th mat-header-cell *matHeaderCellDef> Salary </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.salary}} </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container matColumnDef=\"Salary Disbursement\">\r\n                        <th mat-header-cell *matHeaderCellDef> Salary Disbursement </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.salary_disbursement}} </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container matColumnDef=\"Job Shift\">\r\n                        <th mat-header-cell *matHeaderCellDef> Job Shift </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.job_shift}} </td>\r\n                      </ng-container> -->\r\n\r\n                      <ng-container matColumnDef=\"actions\">\r\n                        <th mat-header-cell *matHeaderCellDef> Actions </th>\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                          <div class=\"buttons\">\r\n                            <a style=\"color: #8f8f8f;\" (click)=\"getUserId(element._id,'edit')\"\r\n                              class=\"mb-2 mr-2 btn-transition btn btn-outline-light btn-sm\">Edit</a>\r\n                            <button (click)=\"getUserId(element._id,'delete')\"\r\n                              class=\"mb-2 mr-2 btn-transition btn btn-outline-light btn-sm\">Delete</button>\r\n                              <button (click)=\"getUserId(element._id,'stores')\"\r\n                              class=\"mb-2 mr-2 btn-transition btn btn-outline-light btn-sm\">View Stores</button>\r\n                          </div>\r\n                        </td>\r\n                      </ng-container>\r\n\r\n\r\n                    </div>\r\n                    <tr mat-header-row *matHeaderRowDef=\"table_headers\"></tr>\r\n                    <tr mat-row *matRowDef=\"let row; columns: table_headers;\"></tr>\r\n                  </table>\r\n                </div>\r\n                <mat-paginator #paginator [pageSize]=\"10\" showFirstLastButtons [pageSizeOptions]=\"[10,50,100,500]\">\r\n                </mat-paginator>\r\n\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n\r\n  </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div>"
+module.exports = "<div class=\"app-main__outer\">\r\n  <div class=\"app-main__inner\">\r\n    <div class=\"app-page-title\">\r\n      <div class=\"page-title-wrapper\">\r\n        <div class=\"page-title-heading\">\r\n          <div class=\"page-title-icon bg-warning text-white\">\r\n            <i class=\"icofont-dashboard-web  \">\r\n            </i>\r\n          </div>\r\n          <div> Users Managment\r\n            <div class=\"page-title-subheading\">Users listing\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"page-title-actions\">\r\n\r\n          <div class=\"d-inline-block dropdown\">\r\n            <a style=\"margin-left: 4px;color: white;\" class=\"btn-shadow  btn btn-info\" (click)=\"navigateToStaffAdd()\">\r\n              <i class=\"icofont-ui-add\"></i> Add New\r\n            </a>\r\n          \r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12\">\r\n\r\n        <h4 class=\"d-flex flex-wrap justify-content-between align-items-center mb-3\">\r\n          <div>Users</div>\r\n          <!-- <div class=\"col-12 col-md-3 p-0 mb-3\">\r\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">\r\n          </div> -->\r\n        </h4>\r\n        <div class=\"main-card mb-3 card\">\r\n          <!-- <div class=\"card-header\">Products\r\n                                        <div class=\"btn-actions-pane-right\">\r\n                                            <div role=\"group\" class=\"btn-group-sm btn-group\">\r\n                                                <button class=\"active btn btn-focus\">Received </button>\r\n                                                <button class=\"btn btn-focus\">Pending</button>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div> -->\r\n          <mat-progress-bar *ngIf=\"!loaded\" mode=\"indeterminate\"></mat-progress-bar>\r\n          <div class=\"card-body\">\r\n\r\n            <div class=\"table-responsive\">\r\n              <mat-form-field style=\"width: 100%;\">\r\n                <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Search...\">\r\n                <!-- (keyup)=\"applyFilter($event.target.value)\" -->\r\n              </mat-form-field>\r\n\r\n              <div class=\"mat-elevation-z8\">\r\n                <div class=\"example-container\">\r\n                  <table mat-table [dataSource]=\"dataSource\" style=\"width: 100%;\">\r\n                    <div>\r\n                      <!-- <ng-container matColumnDef=\"select\">\r\n                        <th mat-header-cell *matHeaderCellDef>\r\n                          <mat-checkbox color=\"primary\" (change)=\"$event ? masterToggle() : null\"\r\n                            [checked]=\"selection.hasValue() && isAllSelected()\"\r\n                            [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\r\n                          </mat-checkbox>\r\n                        </th>\r\n                        <td mat-cell *matCellDef=\"let row\">\r\n                          <mat-checkbox color=\"primary\" (click)=\"$event.stopPropagation()\"\r\n                            (change)=\"checkboxClicked($event,row)\" [checked]=\"selection.isSelected(row)\">\r\n                          </mat-checkbox>\r\n                        </td>\r\n                      </ng-container> -->\r\n\r\n                      <!-- <ng-container matColumnDef=\"user image\">\r\n                        <th mat-header-cell *matHeaderCellDef> </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> <img style=\"width: 30px; height: 30px;\"\r\n                            [src]=\"element.user_image!=null ? element.user_image : '../../../assets/images/no_image.png'\" />\r\n                        </td>\r\n                      </ng-container> -->\r\n\r\n                      <ng-container matColumnDef=\"name\" sticky>\r\n                        <th mat-header-cell *matHeaderCellDef> Name </th>\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                          <span> {{element.first_name}} </span>\r\n                          <span> {{element.last_name}} </span>\r\n                        </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container style=\"margin-right: 10px;\" matColumnDef=\"roles\">\r\n                        <th mat-header-cell *matHeaderCellDef> Type </th>\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                          <span class=\"badge\" [ngClass]=\"{\r\n                            'badge-info':element.roles === 'user',\r\n                            'badge-danger':element.roles === 'admin'\r\n                            \r\n                          }\"> {{element.roles | removeUnderScore | titlecase}}</span>\r\n                          <!-- {'admin': 1, 'user': 2, 'guest': 3, 'manager': 4, 'waiter': 5, 'staff': 6, 'kitchen_manager':7} -->\r\n\r\n                        </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container matColumnDef=\"Email\">\r\n                        <th mat-header-cell *matHeaderCellDef> Email </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n                      </ng-container>\r\n\r\n                      <!-- <ng-container matColumnDef=\"Salary\">\r\n                        <th mat-header-cell *matHeaderCellDef> Salary </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.salary}} </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container matColumnDef=\"Salary Disbursement\">\r\n                        <th mat-header-cell *matHeaderCellDef> Salary Disbursement </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.salary_disbursement}} </td>\r\n                      </ng-container>\r\n\r\n                      <ng-container matColumnDef=\"Job Shift\">\r\n                        <th mat-header-cell *matHeaderCellDef> Job Shift </th>\r\n                        <td mat-cell *matCellDef=\"let element\"> {{element.job_shift}} </td>\r\n                      </ng-container> -->\r\n\r\n                      <ng-container matColumnDef=\"actions\">\r\n                        <th mat-header-cell *matHeaderCellDef> Actions </th>\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                          <div class=\"buttons\">\r\n                            <a style=\"color: #8f8f8f;\" (click)=\"getUserId(element._id,'edit')\"\r\n                              class=\"mb-2 mr-2 btn-transition btn btn-outline-light btn-sm\">Edit</a>\r\n                            <button (click)=\"getUserId(element._id,'delete')\"\r\n                              class=\"mb-2 mr-2 btn-transition btn btn-outline-light btn-sm\">Delete</button>\r\n                              <button (click)=\"getUserStoreId(element._id,element.first_name,element.last_name)\"\r\n                              class=\"mb-2 mr-2 btn-transition btn btn-outline-light btn-sm\">View Stores</button>\r\n                          </div>\r\n                        </td>\r\n                      </ng-container>\r\n\r\n\r\n                    </div>\r\n                    <tr mat-header-row *matHeaderRowDef=\"table_headers\"></tr>\r\n                    <tr mat-row *matRowDef=\"let row; columns: table_headers;\"></tr>\r\n                  </table>\r\n                </div>\r\n                <mat-paginator #paginator [pageSize]=\"10\" showFirstLastButtons [pageSizeOptions]=\"[10,50,100,500]\">\r\n                </mat-paginator>\r\n\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n\r\n  </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -4257,6 +4307,12 @@ var UsersComponent = /** @class */ (function () {
         else {
             this.deleteUserById(this.Userdata);
         }
+    };
+    UsersComponent.prototype.getUserStoreId = function (user_id, first_Name, last_Name) {
+        this.Userdata['model'] = 'users';
+        this.Userdata['_id'] = user_id;
+        console.log('staff id', user_id);
+        this.router.navigate(['/jeptag/user/stores', user_id, first_Name, last_Name]);
     };
     UsersComponent.prototype.deleteUserById = function (Userdata) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
@@ -5991,7 +6047,7 @@ var AuthService = /** @class */ (function () {
     }
     AuthService.prototype.login = function (contact_number, password) {
         var _this = this;
-        return this.http.post('/api/user/login', {
+        return this.http.post('/api/user/loginAdmin', {
             "email": contact_number,
             "password": password
             //"type":"user"
@@ -7800,10 +7856,10 @@ var routes = [
                 path: 'user/edit/:id', component: _Jeptag_admin_UserManagment_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_3__["EditUserComponent"]
             },
             {
-                path: 'user/stores/:id', component: _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_16__["StoreListingComponent"]
+                path: 'user/stores/:id/:fname/:lname', component: _Jeptag_admin_Stores_store_listing_store_listing_component__WEBPACK_IMPORTED_MODULE_16__["StoreListingComponent"]
             },
             {
-                path: 'user/stores/add/:id', component: _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_17__["AddStoreComponent"]
+                path: 'user/stores/add/:id/:fname/:lname', component: _Jeptag_admin_Stores_add_store_add_store_component__WEBPACK_IMPORTED_MODULE_17__["AddStoreComponent"]
             },
             {
                 path: 'products/edit/:id', component: _Jeptag_admin_Products_edit_products_edit_products_component__WEBPACK_IMPORTED_MODULE_25__["EditProductsComponent"]
@@ -8149,8 +8205,9 @@ var environment = {
     // baseUrl: 'http://192.168.10.11:3000' // staging
     //baseUrl: 'http://192.168.10.4:3000' // staging
     //baseUrl: 'http://192.168.10.11:3000' // staging
+    //USE THIS
     baseUrl: 'http://206.81.6.168' // staging
-    //baseUrl:'http://192.168.43.144:3000'
+    //baseUrl:'http://192.168.10.3:3000'
     //baseUrl: 'http://168.63.140.202:8001/instamunch/' // staging
     //baseUrl: 'http://51.11.55.5:8000/instamunch/' // production
 };

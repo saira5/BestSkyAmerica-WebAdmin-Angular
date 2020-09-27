@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../Services/auth.service';
 import { response } from '../../Interfaces/response';
 import { DataSharingService } from '../../Services/data-sharing.service';
+import { SwalAlert } from '../../Shared/swalAlerts';
 
 @Component({
   selector: 'app-login',
@@ -39,8 +40,10 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['jeptag']);
         }
         else {
+          
           this.loginError = true;
           this.error_message = response['message'];
+          SwalAlert.errorAlert('', "Sign in Unsuccessful");
 
         }
         //  console.log(data);

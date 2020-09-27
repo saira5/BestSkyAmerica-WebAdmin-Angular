@@ -28,8 +28,10 @@ export class StoreListingComponent implements OnInit {
   add:boolean=false;
   staff: any;
   loaded: boolean = false;
-
+  company_name:any;
   staff_ids: any = [];
+  fname:any;
+  lname:any;
 
   ngOnInit() {
     this.table_headers = [ 'Name', 'status', 'City', 'Region','Country', 'Phone', 'actions'];
@@ -37,6 +39,9 @@ export class StoreListingComponent implements OnInit {
     if (store_id != null) {
       this.add=false;
       this.getStaffListbyID(this.currentActivatedRoute.snapshot.paramMap.get('id'));
+       this.fname=this.currentActivatedRoute.snapshot.paramMap.get('fname');
+       this.lname=this.currentActivatedRoute.snapshot.paramMap.get('lname');
+ 
     }
     else{
       this.add=true;
@@ -210,7 +215,7 @@ export class StoreListingComponent implements OnInit {
 
   navigateToStoreAdd() {
  //   this.router.navigate(['add'], { relativeTo: this.currentActivatedRoute });
-     this.router.navigate(['jeptag/user/stores/add',this.currentActivatedRoute.snapshot.paramMap.get('id')]);
+     this.router.navigate(['jeptag/user/stores/add',this.currentActivatedRoute.snapshot.paramMap.get('id'),this.fname,this.lname]);
 
   }
 

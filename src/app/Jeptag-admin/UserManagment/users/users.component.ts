@@ -71,7 +71,14 @@ export class UsersComponent implements OnInit {
       this.deleteUserById(this.Userdata);
     }
   }
-
+  getUserStoreId(user_id,first_Name,last_Name) {
+    this.Userdata['model']='users';
+    this.Userdata['_id']=user_id
+    console.log('staff id', user_id);
+   
+      this.router.navigate(['/jeptag/user/stores', user_id,first_Name,last_Name]);
+   
+  }
   async deleteUserById(Userdata) {
     const response = await SwalAlert.getDeleteSwal();
     if (response == true) {

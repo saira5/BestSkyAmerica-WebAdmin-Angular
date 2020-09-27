@@ -15,7 +15,7 @@ export class AuthService {
 
   login(contact_number: string, password: string) {
 
-    return this.http.post<any>('/api/user/login',
+    return this.http.post<any>('/api/user/loginAdmin',
       {
         "email": contact_number,
         "password": password

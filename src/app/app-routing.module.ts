@@ -66,10 +66,10 @@ const routes: Routes = [
         path: 'user/edit/:id', component: EditUserComponent
       },
       {
-        path: 'user/stores/:id', component: StoreListingComponent
+        path: 'user/stores/:id/:fname/:lname', component: StoreListingComponent
       },
       {
-        path: 'user/stores/add/:id', component: AddStoreComponent
+        path: 'user/stores/add/:id/:fname/:lname', component: AddStoreComponent
       },
       {
         path: 'products/edit/:id', component: EditProductsComponent

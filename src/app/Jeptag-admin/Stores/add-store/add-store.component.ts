@@ -20,39 +20,41 @@ export class AddStoreComponent implements OnInit {
   fields: FieldConfig[] = [] as FieldConfig[];
   submit_clicked: boolean;
   clear_form: boolean;
-  userData={};
+  userData = {};
   loaded = false;
   edit: boolean = false;
-  store:store;
+  store: store;
+  company_name: any;
   constructor(private StoreService: StoreService,
-    private active_route: ActivatedRoute, private router: Router,private AuthService:AuthService) { 
-      
-    }
+    private active_route: ActivatedRoute, private router: Router, private AuthService: AuthService) {
+
+  }
 
   ngOnInit() {
 
 
     this.form['form_fields'] = this.fields;
     const store_id = this.active_route.snapshot.paramMap.get('id');
+    this.company_name = this.active_route.snapshot.paramMap.get('fname')+" "+this.active_route.snapshot.paramMap.get('lname');
 
-console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
+    console.log("idddd " + this.active_route.snapshot.paramMap.get('id'))
 
-//console.log("word "+this.active_route.contains("ss"))
+    //console.log("word "+this.active_route.contains("ss"))
 
 
-// if (store_id != null) {
-//   this.edit = true;
-//       this.loaded = true;
+    // if (store_id != null) {
+    //   this.edit = true;
+    //       this.loaded = true;
 
-     
 
-//       this.getStoreById(store_id);
-//     }
-//     else {
-      this.edit = false;
-       this.loaded = true;
-      this.generateForm();
-   // }
+
+    //       this.getStoreById(store_id);
+    //     }
+    //     else {
+    this.edit = false;
+    this.loaded = true;
+    this.generateForm();
+    // }
 
 
     // this.form['form_fields'] = this.fields;
@@ -63,7 +65,7 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
 
 
   getStoreById(id) {
-    console.log("store id"+id)
+    console.log("store id" + id)
     let store = this.StoreService.getStoreById(id);
     store.subscribe(
       result => {
@@ -71,9 +73,9 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
         console.log('store by id:', result);
         this.store = result['result'];
         console.log('RESULT:', result);
-        if (result!=null) {
+        if (result != null) {
           this.loaded = true;
-          console.log("job data above generate form"+this.store)
+          console.log("job data above generate form" + this.store)
           this.generateForm(this.store);
         }
         else {
@@ -92,16 +94,19 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
   }
 
   generateForm(store?: store) {
-  //  console.log("store"+store)
+    //  console.log("store"+store)
     this.fields = [
       { label: 'Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "Name", validations: [Validators.required], required: true, value: store ? store.Name : '' },
+      {
+        label: 'Company Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "CompanyId", validations: [Validators.required], required: true, value: this.company_name
+      },
       {
         label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "Address", validations: [Validators.required], required: true, value: store ? store.Address : ''
       },
       {
         label: 'City', type: 'text', bootstrapGridClass: "col-lg-6", name: "City", validations: [Validators.required], required: true, value: store ? store.City : ''
       },
-      
+
       {
         label: 'Region', type: 'text', bootstrapGridClass: "col-lg-6", name: "Region", validations: [Validators.required], required: true, value: store ? store.Region : ''
       },
@@ -124,10 +129,10 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
         label: 'GEOLong', type: 'number', bootstrapGridClass: "col-lg-6", name: "GEOLong", validations: [Validators.required], required: true, value: store ? store.GEOLong : ''
       },
       {
-        label: 'Status', type: 'select', bootstrapGridClass: "col-lg-12", name: "status", validations: [Validators.required], required: true,
+        label: 'Status', type: 'select', bootstrapGridClass: "col-lg-6", name: "status", validations: [Validators.required], required: true,
         value: store ? store.status : 'true', options: Status
-       }
-    
+      }
+
     ]
     this.form['form_fields'] = this.fields;
     this.form['FormbootstrapGridClass'] = 'col-lg-12';
@@ -137,7 +142,7 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
     this.form['ImagebootstrapGridClass'] = 'col-lg-3';
     this.form['img_height'] = "200px";
     this.form['img_width'] = "200px";
-  //  this.form['image_url'] = job ? job.job_image : null;
+    //  this.form['image_url'] = job ? job.job_image : null;
     this.form['submit'] = 'Save';
   }
 
@@ -146,11 +151,11 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
     console.log(data);
     //this.loggen_in_user = JSON.parse(localStorage.getItem('user'));
 
- //   this.userData=  this.AuthService.getUser();
-   // console.log("user id :"+this.userData['id'])
-     data['model']='StoresDetail';
+    //   this.userData=  this.AuthService.getUser();
+    // console.log("user id :"+this.userData['id'])
+    data['model'] = 'StoresDetail';
 
-   
+
     // if (data['image'] != undefined) {
     //   data['job_image'] = data['image'];
     //   delete data['image'];
@@ -163,11 +168,11 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
     //   this.editStore(data, id);
     // }
     // else {
-      data['seller_id']=this.active_route.snapshot.paramMap.get('id');
+    data['seller_id'] = this.active_route.snapshot.paramMap.get('id');
 
-      this.addStore(data);
-  //  }
-  
+    this.addStore(data);
+    //  }
+
 
   }
 
@@ -193,7 +198,7 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
   // }
 
   addStore(data) {
-    
+
     this.StoreService.addStore(data).subscribe(
       result => {
         this.submit_clicked = false;
@@ -217,7 +222,7 @@ console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
 
 
   navigateToJobListing() {
-    this.router.navigate(['/jeptag/user/stores',this.active_route.snapshot.paramMap.get('id')])
+    this.router.navigate(['/jeptag/user/stores', this.active_route.snapshot.paramMap.get('id')])
   }
 
 }
