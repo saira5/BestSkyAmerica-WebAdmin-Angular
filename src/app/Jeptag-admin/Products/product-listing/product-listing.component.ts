@@ -98,7 +98,7 @@ productData={}
     this.productData['_id']=product_id
     console.log('job id', product_id);
     if (action == 'edit')
-      this.router.navigate(['/jeptag/products/edit', product_id]);
+      this.router.navigate(['/jeptag/products/edit', product_id,this.currentActivatedRoute.snapshot.paramMap.get('email')]);
     else {
       this.deleteStaffById(this.productData);
     }
@@ -195,9 +195,9 @@ productData={}
 
 
   navigateToStaffAdd() {
-    this.router.navigate(['add'], { relativeTo: this.currentActivatedRoute });
+    //this.router.navigate(['add'], { relativeTo: this.currentActivatedRoute });
 
-    this.router.navigate(['jeptag/stores/products/add', this.currentActivatedRoute.snapshot.paramMap.get('storeid'),this.currentActivatedRoute.snapshot.paramMap.get('userid')]);
+    this.router.navigate(['jeptag/stores/products/add', this.currentActivatedRoute.snapshot.paramMap.get('storeid'),this.currentActivatedRoute.snapshot.paramMap.get('userid'),this.currentActivatedRoute.snapshot.paramMap.get('email')]);
 
   }
 

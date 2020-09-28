@@ -25,6 +25,8 @@ export class EditStoreComponent implements OnInit {
   loaded = false;
   edit: boolean = false;
   store:store;
+  company_name:any;
+  email:any;
   constructor(private StoreService: StoreService,
     private active_route: ActivatedRoute, private router: Router,private AuthService:AuthService) { 
       
@@ -37,7 +39,8 @@ export class EditStoreComponent implements OnInit {
     const store_id = this.active_route.snapshot.paramMap.get('id');
 
 console.log("idddd "+this.active_route.snapshot.paramMap.get('id'))
-
+this.company_name = this.active_route.snapshot.paramMap.get('cname');
+this.email = this.active_route.snapshot.paramMap.get('email');
 //console.log("word "+this.active_route.contains("ss"))
 
 
@@ -98,6 +101,12 @@ if (store_id != null) {
       { label: 'Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "Name", validations: [Validators.required], required: true, value: store ? store.Name : '' },
       {
         label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "Address", validations: [Validators.required], required: true, value: store ? store.Address : ''
+      },
+      {
+        label: 'Company Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "CompanyId", validations: [Validators.required], required: true, value: this.company_name
+      },
+      {
+        label: 'Store ID', type: 'text', bootstrapGridClass: "col-lg-6", name: "storeID", validations: [Validators.required], required: true, value:store ? store.storeID : ''
       },
       {
         label: 'City', type: 'text', bootstrapGridClass: "col-lg-6", name: "City", validations: [Validators.required], required: true, value: store ? store.City : ''
@@ -218,7 +227,7 @@ if (store_id != null) {
 
 
   navigateToJobListing() {
-    this.router.navigate(['jeptag/user/stores',this.active_route.snapshot.paramMap.get('storeid')])
+    this.router.navigate(['jeptag/user/stores',this.active_route.snapshot.paramMap.get('storeid'),this.company_name,this.email])
   }
 
 }

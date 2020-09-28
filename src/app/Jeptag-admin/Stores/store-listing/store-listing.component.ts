@@ -31,6 +31,7 @@ export class StoreListingComponent implements OnInit {
   company_name:any;
   staff_ids: any = [];
   cname:any;
+  email:any;
 
 
   ngOnInit() {
@@ -40,7 +41,7 @@ export class StoreListingComponent implements OnInit {
       this.add=false;
       this.getStaffListbyID(this.currentActivatedRoute.snapshot.paramMap.get('id'));
        this.cname=this.currentActivatedRoute.snapshot.paramMap.get('cname');
-       
+       this.email=this.currentActivatedRoute.snapshot.paramMap.get('email');
  
     }
     else{
@@ -107,10 +108,10 @@ export class StoreListingComponent implements OnInit {
     console.log('job id', store_id);
     if (action == 'edit')
     
-      this.router.navigate(['/jeptag/stores/edit', store_id,this.currentActivatedRoute.snapshot.paramMap.get('id')]);
+      this.router.navigate(['/jeptag/stores/edit', store_id,this.currentActivatedRoute.snapshot.paramMap.get('id'),this.cname,this.email]);
       else if (action == 'products')
     
-      this.router.navigate(['/jeptag/stores/products',store_id,this.currentActivatedRoute.snapshot.paramMap.get('id') ]);
+      this.router.navigate(['/jeptag/stores/products',store_id,this.currentActivatedRoute.snapshot.paramMap.get('id') ,this.email]);
     else {
       this.deleteStoreById(this.storeData);
     }
@@ -215,7 +216,7 @@ export class StoreListingComponent implements OnInit {
 
   navigateToStoreAdd() {
  //   this.router.navigate(['add'], { relativeTo: this.currentActivatedRoute });
-     this.router.navigate(['jeptag/user/stores/add',this.currentActivatedRoute.snapshot.paramMap.get('id'),this.cname]);
+     this.router.navigate(['jeptag/user/stores/add',this.currentActivatedRoute.snapshot.paramMap.get('id'),this.cname, this.email]);
 
   }
 

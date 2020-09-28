@@ -25,6 +25,7 @@ export class AddStoreComponent implements OnInit {
   edit: boolean = false;
   store: store;
   company_name: any;
+  email:any;
   constructor(private StoreService: StoreService,
     private active_route: ActivatedRoute, private router: Router, private AuthService: AuthService) {
 
@@ -35,8 +36,8 @@ export class AddStoreComponent implements OnInit {
 
     this.form['form_fields'] = this.fields;
     const store_id = this.active_route.snapshot.paramMap.get('id');
-    this.company_name = this.active_route.snapshot.paramMap.get('cname');;
-
+    this.company_name = this.active_route.snapshot.paramMap.get('cname');
+    this.email = this.active_route.snapshot.paramMap.get('email');
     console.log("idddd " + this.active_route.snapshot.paramMap.get('id'))
 
     //console.log("word "+this.active_route.contains("ss"))
@@ -132,7 +133,7 @@ export class AddStoreComponent implements OnInit {
         label: 'GEOLong', type: 'number', bootstrapGridClass: "col-lg-6", name: "GEOLong", validations: [Validators.required], required: true, value: store ? store.GEOLong : ''
       },
       {
-        label: 'Status', type: 'select', bootstrapGridClass: "col-lg-6", name: "status", validations: [Validators.required], required: true,
+        label: 'Status', type: 'select', bootstrapGridClass: "col-lg-12", name: "status", validations: [Validators.required], required: true,
         value: store ? store.status : 'true', options: Status
       }
 
@@ -225,7 +226,7 @@ export class AddStoreComponent implements OnInit {
 
 
   navigateToJobListing() {
-    this.router.navigate(['/jeptag/user/stores', this.active_route.snapshot.paramMap.get('id')])
+    this.router.navigate(['/jeptag/user/stores', this.active_route.snapshot.paramMap.get('id'), this.company_name,this.email])
   }
 
 }

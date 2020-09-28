@@ -71,12 +71,12 @@ export class UsersComponent implements OnInit {
       this.deleteUserById(this.Userdata);
     }
   }
-  getUserStoreId(user_id,company_Name) {
+  getUserStoreId(user_id,company_Name,email) {
     this.Userdata['model']='users';
     this.Userdata['_id']=user_id
     console.log('staff id', user_id);
    
-      this.router.navigate(['/jeptag/user/stores', user_id,company_Name]);
+      this.router.navigate(['/jeptag/user/stores', user_id,company_Name,email]);
    
   }
   async deleteUserById(Userdata) {

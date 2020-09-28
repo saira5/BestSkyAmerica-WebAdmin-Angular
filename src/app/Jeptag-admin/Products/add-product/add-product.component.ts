@@ -30,6 +30,7 @@ export class AddProductComponent implements OnInit {
   loaded = false;
   edit: boolean = false;
   p: any={}
+  email:any;
   convertImage:string;
   constructor(private productService: ProductService,
     private active_route: ActivatedRoute, private router: Router) { }
@@ -37,7 +38,7 @@ export class AddProductComponent implements OnInit {
   ngOnInit() {
     this.form['form_fields'] = this.fields;
     const product_id = this.active_route.snapshot.paramMap.get('storeid');
-
+this.email== this.active_route.snapshot.paramMap.get('email');
     // if (product_id != null) {
     //   this.edit = true;
     //   this.loaded = true;
@@ -153,6 +154,7 @@ export class AddProductComponent implements OnInit {
     console.log("clickedddddd")
     data['store_id']=this.active_route.snapshot.paramMap.get('storeid')
     data['seller_id']=this.active_route.snapshot.paramMap.get('userid')
+    data['email']=this.active_route.snapshot.paramMap.get('email')
     this.clear_form = false;
     this.submit_clicked = true;
     console.log("dataaaaaaaa"+data);
@@ -239,9 +241,9 @@ export class AddProductComponent implements OnInit {
     }
     return is_selected;
   }
-
+  
   navigateToProductListing() {
-    this.router.navigate(['/jeptag/stores/products',this.active_route.snapshot.paramMap.get('storeid'),this.active_route.snapshot.paramMap.get('userid')])
+    this.router.navigate(['/jeptag/stores/products',this.active_route.snapshot.paramMap.get('storeid'),this.active_route.snapshot.paramMap.get('userid'),this.active_route.snapshot.paramMap.get('email')])
   }
   onImageChanged(event) {
     console.log("inside the image method")

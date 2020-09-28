@@ -66,13 +66,13 @@ const routes: Routes = [
         path: 'user/edit/:id', component: EditUserComponent
       },
       {
-        path: 'user/stores/:id/:cname', component: StoreListingComponent
+        path: 'user/stores/:id/:cname/:email', component: StoreListingComponent
       },
       {
-        path: 'user/stores/add/:id/:cname', component: AddStoreComponent
+        path: 'user/stores/add/:id/:cname/:email', component: AddStoreComponent
       },
       {
-        path: 'products/edit/:id', component: EditProductsComponent
+        path: 'products/edit/:id/:email', component: EditProductsComponent
       },
      
       // {
@@ -99,13 +99,13 @@ const routes: Routes = [
 },
 
 {
-  path: 'stores/edit/:id/:storeid', component: EditStoreComponent
+  path: 'stores/edit/:id/:storeid/:cname/:email', component: EditStoreComponent
 },
 {
-  path: 'stores/products/:storeid/:userid', component: ProductListingComponent
+  path: 'stores/products/:storeid/:userid/:email', component: ProductListingComponent
 },
 {
-  path: 'stores/products/add/:storeid/:userid', component: AddProductComponent
+  path: 'stores/products/add/:storeid/:userid/:email', component: AddProductComponent
 },
 {
   path: 'categories', component: CategoriesComponent

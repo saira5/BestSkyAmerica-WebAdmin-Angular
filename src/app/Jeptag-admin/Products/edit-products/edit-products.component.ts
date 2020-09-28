@@ -197,6 +197,8 @@ export class EditProductsComponent implements OnInit {
 
     // data['image']=this.images;
     data['model']="products"
+    
+    data['email']= this.active_route.snapshot.paramMap.get('email');
     this.productService.editProduct(data, id).subscribe(
       result => {
         this.submit_clicked = false;
