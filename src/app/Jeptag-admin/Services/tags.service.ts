@@ -33,7 +33,6 @@ export class TagsService {
   addStore(data) {
     return this.httpServices.post(data, '/api/common/add-data').pipe(
       catchError(err => of({ error: true, message: 'Server error', data: [] })));
-
   }
   editTag(data,id){
     data['_id']=id;
