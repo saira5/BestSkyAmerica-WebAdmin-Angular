@@ -35,9 +35,9 @@ export class AddUserComponent implements OnInit {
 
   generateForm(staff?: Users) {
     this.fields = [
-      { label: 'First Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "first_name", validations: [Validators.required,Validators.pattern(validation_patterns.nameRegex),Validators.maxLength(25)], required: true, value: staff ? staff.first_name : '' },
+      { label: 'First Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "first_name", validations: [Validators.required,Validators.maxLength(25)], required: true, value: staff ? staff.first_name : '' },
       {
-        label: 'Last Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "last_name", validations: [Validators.required,Validators.pattern(validation_patterns.nameRegex),Validators.maxLength(25)], required: true, value: staff ? staff.last_name : ''
+        label: 'Last Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "last_name", validations: [Validators.required,Validators.maxLength(25)], required: true, value: staff ? staff.last_name : ''
       },
       {
         label: 'Email', type: 'text', bootstrapGridClass: "col-lg-6", name: "email", validations: [Validators.required, Validators.pattern(validation_patterns.email_regex)], required: true, value: staff ? staff.email : ''

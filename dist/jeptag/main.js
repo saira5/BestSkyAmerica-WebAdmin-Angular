@@ -1493,6 +1493,15 @@ var EditProductsComponent = /** @class */ (function () {
                     label: 'price', type: 'number', bootstrapGridClass: "col-lg-6", name: "price", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(src_app_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_9__["validation_patterns"].postive_numbers)], required: true, value: product ? product.price : ''
                 },
                 {
+                    label: 'Condition', type: 'text', bootstrapGridClass: "col-lg-6", name: "condition", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.condition : ''
+                },
+                {
+                    label: 'Barcode', type: 'text', bootstrapGridClass: "col-lg-6", name: "barcode_type", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.barcode_type : ''
+                },
+                {
+                    label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "adress", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.adress : ''
+                },
+                {
                     label: 'Quantity', type: 'number', bootstrapGridClass: "col-lg-6", name: "alert_quantity", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(src_app_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_9__["validation_patterns"].postive_numbers)], required: true, value: product ? product.alert_quantity : ''
                 },
                 {
@@ -1502,7 +1511,7 @@ var EditProductsComponent = /** @class */ (function () {
                     label: 'SubCategory', type: 'ngselectSub2', bootstrapGridClass: "col-lg-6", name: "category", required: true, value: product ? product.category : '', options: product.category_id
                 },
                 {
-                    label: 'Brands', type: 'ngselect2', bootstrapGridClass: "col-lg-6", name: "brand_id", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.brand_id : '', options: result[1]
+                    label: 'Brands', type: 'ngselect2', bootstrapGridClass: "col-lg-12", name: "brand_id", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.brand_id : '', options: result[1]
                 },
                 {
                     label: 'Description', type: 'textarea', bootstrapGridClass: "col-lg-12", name: "description", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required], required: true, value: product ? product.description : ''
@@ -3977,9 +3986,9 @@ var AddUserComponent = /** @class */ (function () {
     };
     AddUserComponent.prototype.generateForm = function (staff) {
         this.fields = [
-            { label: 'First Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "first_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].nameRegex), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.first_name : '' },
+            { label: 'First Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "first_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.first_name : '' },
             {
-                label: 'Last Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "last_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].nameRegex), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.last_name : ''
+                label: 'Last Name', type: 'text', bootstrapGridClass: "col-lg-6", name: "last_name", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(25)], required: true, value: staff ? staff.last_name : ''
             },
             {
                 label: 'Email', type: 'text', bootstrapGridClass: "col-lg-6", name: "email", validations: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(_Shared_validation_patterns__WEBPACK_IMPORTED_MODULE_8__["validation_patterns"].email_regex)], required: true, value: staff ? staff.email : ''

@@ -88,6 +88,15 @@ export class EditProductsComponent implements OnInit {
           label: 'price', type: 'number', bootstrapGridClass: "col-lg-6", name: "price", validations: [Validators.required,Validators.pattern(validation_patterns.postive_numbers)], required: true, value: product ? product.price : ''
         },
         {
+          label: 'Condition', type: 'text', bootstrapGridClass: "col-lg-6", name: "condition", validations: [Validators.required], required: true, value: product ? product.condition : ''
+        },
+        {
+          label: 'Barcode', type: 'text', bootstrapGridClass: "col-lg-6", name: "barcode_type", validations: [Validators.required], required: true, value: product ? product.barcode_type : ''
+        },
+        {
+          label: 'Address', type: 'text', bootstrapGridClass: "col-lg-6", name: "adress", validations: [Validators.required], required: true, value: product ? product.adress : ''
+        },
+        {
           label: 'Quantity', type: 'number', bootstrapGridClass: "col-lg-6", name: "alert_quantity", validations: [Validators.required,Validators.pattern(validation_patterns.postive_numbers)], required: true, value: product ? product.alert_quantity : ''
         },
         {
@@ -97,7 +106,7 @@ export class EditProductsComponent implements OnInit {
           label: 'SubCategory', type: 'ngselectSub2', bootstrapGridClass: "col-lg-6", name: "category", required: true,value: product ? product.category : '', options: product.category_id
         }
        , {
-          label: 'Brands', type: 'ngselect2', bootstrapGridClass: "col-lg-6", name: "brand_id", validations: [Validators.required], required: true, value: product ? product.brand_id : '', options: result[1]
+          label: 'Brands', type: 'ngselect2', bootstrapGridClass: "col-lg-12", name: "brand_id", validations: [Validators.required], required: true, value: product ? product.brand_id : '', options: result[1]
         }
         , {
           label: 'Description', type: 'textarea', bootstrapGridClass: "col-lg-12", name: "description", validations: [Validators.required], required: true, value: product ? product.description : ''
